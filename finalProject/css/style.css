@@ -1,0 +1,54 @@
+* {
+    max-width: 1150px;
+    font-family: 'Lato', sans-serif;
+}
+body {
+    color: #bcbbbb;
+    background-color: #fff;
+    font-weight: 300;
+}
+.radius {
+    border-radius: 50%;
+}
+.h1txt {
+    font-weight: 100;
+    font-size: 40px;
+    color: black;
+    
+}
+.h3txt {
+    font-size: 18px;
+    color: #878787;
+}
+.header {
+   padding-top: 31px;
+   padding-bottom: 6px;
+   background-color: white;
+   max-width: 100%
+}
+.ud {
+    padding-top: 8px;
+}
+.rule {
+    height: 3px;
+    background-color: #bcbbbb;
+    margin-top: 0px;
+}
+.rulewhite {
+    background-color: white;
+    height: 30px;
+}
+.usbpad {
+    padding: 0px;
+}
+.blacktext {
+    color: black;
+    font-weight: bold;
+}
+.mxwdth {
+    max-width: 100%;
+}
+.dent {
+    margin-top: 15px;
+    margin-left: 0px;
+}

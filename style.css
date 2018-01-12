@@ -1,0 +1,168 @@
+* {
+    /*background: url("images/longAgo.jpg") red;*/
+    /*background: radial-gradient(circle, red, white);*/
+    /*background: linear-gradient(red, white);*/
+    /*background-size: cover;  //contain will always show the img*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    /*outline: 1px red solid;*/
+    background-color: tan;
+}
+.hidden{
+    display: none;
+}
+.contacts{
+    color: #c55644;
+    background: lightgray;
+    z-index: 1;
+}
+/*nav {
+list-style-type: none;
+}
+nav li {
+display: inline;
+}*/
+img{
+    height: 350px;
+}
+hr {
+    margin: 0px;
+    width: 100%;
+    max-width: 1157px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.pre{
+    font-size: 10em;
+}
+.skills{
+    margin: 2px;
+}
+.skills2{
+    margin: 2px;
+    font-size: 30px;
+    text-align: left;
+}
+.top{
+    background: tan;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1157px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.head{
+    text-align: center;
+    font-size: 5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: tan;
+}
+.head2{
+    text-align: right;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.navigation{
+    /*background-color: #c3b44a;*/
+    font-size: 2em;
+    font-weight: bolder;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    max-width: 1157px;
+    margin-right: auto;
+    margin-left: auto;
+    /*display: none;*/
+    background: linear-gradient(tan, rgba(195, 180, 74, 0.83), tan);
+}
+.nav2{
+    background: linear-gradient(tan, rgba(195, 180, 74, 0.83), tan);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.message{
+    width: 100%;
+    max-width: 1157px;
+    margin-right: auto;
+    margin-left: auto;
+    background: tan;
+}
+.messageHead{
+    text-align: center;
+    font-size: 3em;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.messageBody{
+    font-size: 2em;
+    margin: 10px;
+}
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1157px;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(tan, #c3b44a, tan);
+}
+.education{
+    font-size: 1.3em;
+}
+.projects{
+    height: initial;
+    width: 16.66%;
+}
+@media only screen and (max-width: 1000px){
+    .head{font-size: 4em;}
+}
+@media only screen and (max-width: 850px){
+    img {height: 250px;}
+    .head{font-size: 3em;}
+}
+@media only screen and (max-width: 600px){
+    img {
+        width: 100%;
+    }
+}
+.col-1 {
+    width: 8.33%
+}
+.col-2 {
+    width: 16.66%
+}
+.col-3 {
+    width: 25%
+}
+.col-4 {
+    width: 33.33%
+}
+.col-5 {
+    width: 41.66%
+}
+.col-6 {
+    width: 50%
+}
+.col-7 {
+    width: 58.33%
+}
+.col-8 {
+    width: 66.66%
+}
+.col-9 {
+    width: 75%
+}
+.col-10 {
+    width: 83.33%
+}.col-11 {
+    width: 91.66%
+}
+.col-12 {
+    width: 100%
+}
