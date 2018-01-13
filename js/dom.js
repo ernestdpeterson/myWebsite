@@ -3,19 +3,18 @@ var bio = {
     "name" : "Ernest D. Peterson",
     "role" : "Web Developer",
     "contacts" : {
-        "github" : "ernestdpeterson@github.com",
+        "github" : "https://github.com/ernestdpeterson",
         "mobile" : "601-307-4377",
         "email" : "ernest@ernestpeterson.com",
         "location" : "Pensacola, FL",
     },
-    "WelcomeMessage" : "Welcome To My Resume Page",
     "Skills" : [
-        " HTML5", " CSS3", " MySQL", " JavaScript", " JQuery", " Computer Repair", " Mechanic", " Welder", " Truck Driver"
+        " HTML5", " CSS3", " JavaScript", " JQuery", " MySQL", " Computer_Repair_and_Maintainance"
     ],
     "pictureURL" : "images/longAgo.jpg"
-}
+};
 
-var navKey = ["Home", "Bio", "Work History", "Portfolio", "Contact"];
+var navKey = ["Home", "Bio", "Work History", "Qualifications", "Contact_By:"];
 
 var education = {
     "schools" : [
@@ -52,8 +51,9 @@ var education = {
         {
             "title" : "Front End Web Developer",
             "school" : "Udacity",
-            "dates" : "2015",
-            "url" : "https://www.udacity.com/"
+            "dates" : "4/2017-1/2018",
+            "url" : "https://www.udacity.com/",
+            "screenShot" : "images/udacityFEND.pdf"
         },
         {
             "title" : "Explore and Master Chrome DevTools",
@@ -62,7 +62,7 @@ var education = {
             "url" : "http://discover-devtools.codeschool.com/"
         }
     ]
-}
+};
 
 var work = {
     "jobs" : [
@@ -109,19 +109,18 @@ var work = {
             "description" : "Delivered parts from/to GM warehouses and plants."
         }
     ]
-}
+};
 
+// iterate, format and append the work array to the work page]
 work.display = function(){
-    for (job in work.jobs){
+    for (var job in work.jobs){
         var employer1 = work.jobs[job]["employer"] + "<br>";
         var dates1 = work.jobs[job]["dates"] + "<br>";
-        // var title1 = document.write(work.jobs[job]["title"] + "<br>");
         var title1 = work.jobs[job]["title"] + "<br>";
         var location1 = work.jobs[job]["location"] + "<br>" + "<br>";
         var description1 = work.jobs[job]["description"] + "<br>";
-        var formated = "<div class='col-6 work'>" + employer1 + "<br>"
-            + dates1 + title1
-            + location1 + description1 + "<br>" + "<br>" + "</div";
+        var formated = "<div class='col-6 work'>" + employer1 + "<br>" + 
+            dates1 + title1 + location1 + description1 + "<br>" + "<br>" + "</div";
         $("#work:last").append(formated);
     }
 }();
@@ -138,53 +137,75 @@ var projects = {
         },
         {
         "title" : "Front End Web Developer",
-        "dates" : "11/2015-current",
+        "dates" : "11/2015-1/2018",
         "description" : "Learning the various aspects of web page development",
         "images" : [
             "images/smiley.gif"
         ]
         }
     ]
-}
+};
 
-// $("#main").append("<h1>some text</h1>");
-
+// create the header on landing page
 $("#top").append('<img class="col-4" src="images/longAgo.jpg" alt="Resume Picture">');
-$('#top').append('<h1 id="top2" class="col-8 head"><a>Ernest D. Peterson</a></h1>');
-$('#top2').append('<h6 class="col-12 head2"><a>Web Developer</a></h6>');
+$('#top').append('<h1 id="top2" class="col-8 head">Ernest D. Peterson</h1>');
+$('#top2').append('<h6 class="col-12 head2">Web Developer</h6>');
 $('#top2').append('<hr>');
 $('#top2').append('<h6 class="col-12 skills" id="skills">Skills</h6>' + '<hr>');
 $('#top2').append('<div id="top3" class="skills2"></div>');
+
+
+// create the navigation links
 var x = 0;
 navKey.display = function(){
     while(x<navKey.length){
         $('#nav').append('<nav class="nav2">' + navKey[x] + '</nav>');
-        a = x+1;
+        var a = x+1;
         document.getElementsByClassName('nav2')[x].setAttribute('id', 'navLink' + a);
         x++;
     }
 }();
+
+// put the skills array contents in the header of the landing page
 var x = 0;
 bio.display = function(){
     while (x < bio.Skills.length){
-            $('#top3').append('<a class="skills2">' + bio.Skills[x] + '</a>');
+            $('#top3').append('<text class="skills2">' + bio.Skills[x] + '</text>');
             x++;
     }
 }();
+
+
 education.display = function(){
-    for (i in education.onlineCourses) {
-        var eTitle1 = education.onlineCourses[i]["title"] + "<br>";
+    for (var i in education.onlineCourses) {
+        var eTitle1 = education.onlineCourses[i]["title"] + "&nbsp; <br>";
         var eSchool1 = education.onlineCourses[i]["school"] + "<br>";
-        var eDates1 = education.onlineCourses[i]["dates"] + "<br>"
-        var eUrl1 = education.onlineCourses[i]["url"] + "<br>";
-        var eFormat = "<div class='col-6 work education'>" + eTitle1 + "Dates: " + eDates1 + eUrl1 + "<br>" + "</div>";
+        var eDates1 = education.onlineCourses[i]["dates"] + "<br>";
+        var eUrl1 = "<a class=' education' target='_blank' href='" + education.onlineCourses[i]["url"] + "'>Website</a><br>";
+        var eFormat = "<div class='col-6 work education'>" + eTitle1 + eSchool1 + "Dates: " + eDates1 + eUrl1 + "<br><br>" + "</div>";
         $('#education').append(eFormat);
     }
 }();
+
+// style the navigation links
 $('#navLink1, #navLink2, #navLink3, #navLink4, #navLink5').hover(function(){$(this).css('text-decoration', 'underline');}, function(){$(this).css('text-decoration', 'none');});
+
+// TODO move this into an array
 document.getElementById('navLink1').onclick = function(){window.location.href="index.html";};
 document.getElementById('navLink2').onclick = function(){window.location.href="bio.html";};
 document.getElementById('navLink3').onclick = function(){window.location.href="work.html";};
 document.getElementById('navLink4').onclick = function(){window.location.href="portfolio.html";};
-document.getElementById('navLink5').onclick = function(){window.location.href="mailto:ernest@ernestpeterson.com";};
-$('#navLink5').append('<nav class="contacts" href="ernestdpeterson@github.com">'+'Github'+'</nav>');
+// document.getElementById('navLink5').onclick = function(){window.location.href="mailto:ernest@ernestpeterson.com";};
+
+// make drop down menu for contacts
+$('#navLink5').hover(function() {
+    $('.links').toggleClass('hidden show');
+});
+$('#navLink5').append(
+    '<section id="navlink6" class="links hidden">'+
+    '<a href="http://www.linkedin.com/in/ernest-peterson-2b9ab410a/">LinkedIn</a><br>'+
+    '<a href="'+bio.contacts.github+'"> Github </a><br>'+
+    '<a href="mailto:ernest@ernestpeterson.com">Email</a><br>'+
+    '<section>Phone:  601-307-4377</section>'+
+    '</section>'
+);
