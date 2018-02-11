@@ -33,6 +33,9 @@ function initMap() {
     var infowindow = new google.maps.InfoWindow();
     var search = document.getElementById('searchContainer');
     var roto = document.getElementById('roto');
+    var input = document.getElementById('searchInput');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+
     map = new google.maps.Map(document.getElementById('map'), {
       center: startPoint,
       zoom: 5
@@ -63,6 +66,16 @@ function initMap() {
     //places the search boxes inside the map element
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(search);
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(roto);
+
+    function getNewPlace(newPlaceName) {
+        var newPlaceURL = "https://maps.googleapis.com/maps/api/geocode/json?address="+newPlaceName+"&key=AIzaSyDyLw3cQPBIXwwExxqVNBsc9D-4KeVPp8g"
+        $.ajax({
+            url: newPlaceURL,
+            type: 'GET'
+        }).done(function(thisNewPlaceData) {
+            console.log(thisNewPlaceData);
+        });
+    }
 
     service.nearbySearch({
       location: startPoint,
@@ -251,6 +264,22 @@ function initMap() {
                     }
                 }
             }
+        });
+
+        this.inputPlace = ko.observable("");
+        console.log(this.items());
+
+        this.changePlace = ko.observable(function() {
+            koMarkers.forEach(function(oldMarker) {
+                oldMarker.setMap(null);
+            });
+            var newKoArray = [{placeId: "click name to see google reviews", tagId: "instructions", reviews: "Click on the Name of the item you are interested in to see Google reviews of that place.", markerPlace: "not this one", placeType: "none"}];
+            this.items(newKoArray);
+            koMarkers = [];
+            modalArray = [];
+            var newPlace = this.inputPlace();
+            getNewPlace(newPlace);
+        console.log(this.items());
         });
 
         this.makeMarkerType = ko.computed(function() {
