@@ -9,7 +9,7 @@ var bio = {
         "location" : "Pensacola, FL",
     },
     "Skills" : [
-        " HTML5", " CSS3", " JavaScript", " JQuery", " MySQL", " Computer_Repair_and_Maintainance"
+        " HTML5", " &emsp;CSS3", " &emsp;JavaScript", " &emsp;JQuery", " &emsp;KnockoutJS", " &emsp;MySQL", " &emsp;Computer_Repair_and_Maintainance"
     ],
     "pictureURL" : "images/longAgo.jpg"
 };
@@ -71,14 +71,14 @@ var work = {
             "title" : "Truck Driver",
             "location" : "Star, MS",
             "dates" : "06/2008-current",
-            "description" : "Loading, delivering and unloading liquid CO2 or Dry Ice.<br>Complying with all local state and federal regulations.<br>Managing paperwork for load, Department of Transportation and company regulation compliance."
+            "description" : "Loading, delivering and unloading liquid CO2 or Dry Ice.<br>Complying with all local, state and federal regulations.<br>Managing paperwork for load, Department of Transportation and company regulatory compliance."
         },
         {
             "employer" : "Peterson Transportation",
             "title" : "Owner/Operator",
             "location" : "Seminary, MS",
             "dates" : "04/2003-6/2008",
-            "description" : "Owned and operated my trucking company.<br>Used QuickBooks and TurboTax software to balance my books and file my taxes.<br>Managed work acquisition and regulation compliance."
+            "description" : "Owned and operated my trucking company.<br>Used QuickBooks and TurboTax software to balance my books and file my taxes.<br>Managed work acquisition and regulatory compliance."
         },
         {
             "employer" : "Flying J",
@@ -99,7 +99,7 @@ var work = {
             "title" : "Manager, Truck Driver",
             "location" : "Collins, MS",
             "dates" : "11/1993-5/1997",
-            "description" : "Manager of a spray crew.<br>Live haul driver."
+            "description" : "Managed a spray crew of 4.<br>Became a live haul driver to help establish the live haul devision.<br>Substituted for managers needing time of as needed."
         },
         {
             "employer" : "T&L Trucking",
@@ -114,11 +114,11 @@ var work = {
 // iterate, format and append the work array to the work page]
 work.display = function(){
     for (var job in work.jobs){
-        var employer1 = work.jobs[job]["employer"] + "<br>";
-        var dates1 = work.jobs[job]["dates"] + "<br>";
-        var title1 = work.jobs[job]["title"] + "<br>";
-        var location1 = work.jobs[job]["location"] + "<br>" + "<br>";
-        var description1 = work.jobs[job]["description"] + "<br>";
+        var employer1 = work.jobs[job].employer + "<br>";
+        var dates1 = work.jobs[job].dates + "<br>";
+        var title1 = work.jobs[job].title + "<br>";
+        var location1 = work.jobs[job].location + "<br>" + "<br>";
+        var description1 = work.jobs[job].description + "<br>";
         var formated = "<div class='col-6 work'>" + employer1 + "<br>" + 
             dates1 + title1 + location1 + description1 + "<br>" + "<br>" + "</div";
         $("#work:last").append(formated);
@@ -178,10 +178,10 @@ bio.display = function(){
 
 education.display = function(){
     for (var i in education.onlineCourses) {
-        var eTitle1 = education.onlineCourses[i]["title"] + "&nbsp; <br>";
-        var eSchool1 = education.onlineCourses[i]["school"] + "<br>";
-        var eDates1 = education.onlineCourses[i]["dates"] + "<br>";
-        var eUrl1 = "<a class=' education' target='_blank' href='" + education.onlineCourses[i]["url"] + "'>Website</a><br>";
+        var eTitle1 = education.onlineCourses[i].title + "&nbsp; <br>";
+        var eSchool1 = education.onlineCourses[i].school + "<br>";
+        var eDates1 = education.onlineCourses[i].dates + "<br>";
+        var eUrl1 = "<a class=' education' target='_blank' href='" + education.onlineCourses[i].url + "'>Website</a><br>";
         var eFormat = "<div class='col-6 work education'>" + eTitle1 + eSchool1 + "Dates: " + eDates1 + eUrl1 + "<br><br>" + "</div>";
         $('#education').append(eFormat);
     }
