@@ -14,8 +14,6 @@ var bio = {
     "pictureURL" : "images/longAgo.jpg"
 };
 
-var navKey = ["Home", "Bio", "Work History", "Qualifications", "Contact_By:"];
-
 var education = {
     "schools" : [
         {
@@ -154,6 +152,8 @@ $('#top2').append('<hr>');
 $('#top2').append('<h6 class="col-12 skills" id="skills">Skills</h6>' + '<hr>');
 $('#top2').append('<div id="top3" class="skills2"></div>');
 
+var navKey = ["Home", "Bio", "Work History", "Qualifications", "Contact_By:"];
+
 
 // create the navigation links
 var x = 0;
@@ -188,7 +188,7 @@ education.display = function(){
 }();
 
 // style the navigation links
-$('#navLink1, #navLink2, #navLink3, #navLink4, #navLink5').hover(function(){$(this).css('text-decoration', 'underline');}, function(){$(this).css('text-decoration', 'none');});
+$('#navLink1, #navLink2, #navLink3, #navLink4, #navLink5').css('text-shadow', '2px 2px gray').hover(function(){$(this).css({'text-decoration': 'underline', 'color': 'white'});}, function(){$(this).css({'text-decoration': 'none', 'color': 'black'});});
 
 // TODO move this into an array
 document.getElementById('navLink1').onclick = function(){window.location.href="index.html";};
