@@ -27,10 +27,17 @@ height: 300px;
     background-color: wheat;
 }
 
+.refineSelector {
+    padding-left: 20px;
+    background: lightcyan;
+    max-width: 120px;
+    margin-left: 8px;
+}
+
 ol {
     
     list-style-type: none;
-    margin-top: 20px;
+    margin-top: 2px;
 }
 
 .content {
@@ -48,7 +55,7 @@ ol {
 #thisMap{
     height: 200px;
     width: 200px;
-        }
+}
 
 /* The Modal background */
 .modal {
