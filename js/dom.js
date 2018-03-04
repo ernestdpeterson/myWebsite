@@ -58,6 +58,12 @@ var education = {
             "school" : "Code School",
             "dates" : "2017",
             "url" : "http://discover-devtools.codeschool.com/"
+        },
+        {
+            "title" : "beginning WordPress",
+            "school" : "Treehouse",
+            "dates" : "2/2018",
+            "url" : "https://teamtreehouse.com"
         }
     ]
 };

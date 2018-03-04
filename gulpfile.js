@@ -23,6 +23,15 @@ gulp.task('jshint', function() {
 
 // copy files from production to distribution
 gulp.task('copyThat', function() {
-  gulp.src('index.html').pipe(gulp.dest('distro'));
+  gulp.src([
+    'index.html',
+    'bio.html',
+    'portfolio.html',
+    'skills.html',
+    'work.html'
+    ]).pipe(gulp.dest('distro'));
+  gulp.src('Frogger-master/**/*.*').pipe(gulp.dest('distro/Frogger-master'));
+  gulp.src('googleMaps/**/*.*').pipe(gulp.dest('distro/googleMaps'));
+  gulp.src('images/**/*.*').pipe(gulp.dest('distro/images'));
   gulp.src('js/dom.js').pipe(uglify()).pipe(gulp.dest('distro/js'));
 });
