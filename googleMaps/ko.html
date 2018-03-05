@@ -49,7 +49,9 @@
 
 <aside id="roto" class="buttonBox">
     <button class="refineSelector"><b>Refine the list to show:</b>
-    <select data-bind="options: optionValues, optionsText: 'seeit', optionsValue: 'thisVal', selectedOptions: addMarkerType, click: someHelp()"></select></button>
+        <select data-bind="options: optionValues, optionsText: 'seeit', optionsValue: 'thisVal', selectedOptions: addMarkerType, click: someHelp()"></select>
+    </button>
+
     <ol id="theList" class="content" data-bind="foreach: items ">
 
         <li data-bind="attr: {id: 'top'+tagId}, if: $root.addMarkerType() == 'all' || $root.addMarkerType() == placeType">

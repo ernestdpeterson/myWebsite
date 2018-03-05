@@ -2,6 +2,7 @@
 
 // grab our gulp packages
 var gulp = require('gulp'),
+    gutil = require('gulp-util'),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint');
 var browserSync = require('browser-sync').create();

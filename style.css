@@ -10,6 +10,9 @@
     /*outline: 1px red solid;*/
     background-color: tan;
 }
+.backGradient{
+    background: linear-gradient(tan, #c3b44a, tan);
+}
 .hidden{
     display: none;
 }

@@ -9,7 +9,7 @@ var bio = {
         "location" : "Pensacola, FL",
     },
     "Skills" : [
-        " HTML5", " &emsp;CSS3", " &emsp;JavaScript", " &emsp;JQuery", " &emsp;KnockoutJS", " &emsp;MySQL", " &emsp;Computer_Repair_and_Maintainance"
+        " HTML5", " &emsp;CSS3", " &emsp;JavaScript", " &emsp;JQuery", " &emsp;KnockoutJS", " &emsp;MySQL", "&emsp;Gulp", " &emsp;Computer_Repair_and_Maintainance"
     ],
     "pictureURL" : "images/longAgo.jpg"
 };
@@ -60,7 +60,7 @@ var education = {
             "url" : "http://discover-devtools.codeschool.com/"
         },
         {
-            "title" : "beginning WordPress",
+            "title" : "Beginning WordPress",
             "school" : "Treehouse",
             "dates" : "2/2018",
             "url" : "https://teamtreehouse.com"
@@ -194,16 +194,16 @@ education.display = function(){
 }();
 
 // style the navigation links
-$('#navLink1, #navLink2, #navLink3, #navLink4, #navLink5').css('text-shadow', '2px 2px gray').hover(function(){$(this).css({'text-decoration': 'underline', 'color': 'white'});}, function(){$(this).css({'text-decoration': 'none', 'color': 'black'});});
+$('#navLink1, #navLink2, #navLink3, #navLink4, #navLink5').css('text-shadow', '2px 2px gray').hover(function(){$(this).css({'text-decoration': 'underline', 'color': 'lightgray'});}, function(){$(this).css({'text-decoration': 'none', 'color': 'black'});});
 
-// TODO move this into an array
+// TODO move navlinks into an array
 document.getElementById('navLink1').onclick = function(){window.location.href="index.html";};
 document.getElementById('navLink2').onclick = function(){window.location.href="bio.html";};
 document.getElementById('navLink3').onclick = function(){window.location.href="work.html";};
 document.getElementById('navLink4').onclick = function(){window.location.href="portfolio.html";};
 // document.getElementById('navLink5').onclick = function(){window.location.href="mailto:ernest@ernestpeterson.com";};
 
-// make drop down menu for contacts
+// make drop down menu for contacts 
 $('#navLink5').hover(function() {
     $('.links').toggleClass('hidden show');
 });

@@ -1,3 +1,4 @@
+var applyBindingsControl = 0;
 var typeVariable;
 var map;
 var koArray = [{placeId: "click name to see google reviews", tagId: "instructions", reviews: "Click on the Name of the item you are interested in to see Google reviews of that place.", markerPlace: "not this one", placeType: "none"}];
@@ -67,16 +68,6 @@ function initMap() {
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(search);
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(roto);
 
-    function getNewPlace(newPlaceName) {
-        var newPlaceURL = "https://maps.googleapis.com/maps/api/geocode/json?address="+newPlaceName+"&key=AIzaSyDyLw3cQPBIXwwExxqVNBsc9D-4KeVPp8g"
-        $.ajax({
-            url: newPlaceURL,
-            type: 'GET'
-        }).done(function(thisNewPlaceData) {
-            console.log(thisNewPlaceData);
-        });
-    }
-
     service.nearbySearch({
       location: startPoint,
       radius: 500,
@@ -142,11 +133,12 @@ function initMap() {
                                     });
 
                         //keeps the KO Bindings from being fired before the arrays are populated.
-                        if (i==20) {
+                        if (i==20 && applyBindingsControl < 1) {
                             setTimeout(function(){
                                 ko.applyBindings(new SimpleListModel(koArray));
                             }, 500); 
                             i+=1;
+                            applyBindingsControl+=1;
                         }
 
                         //populate the modalArray
@@ -267,7 +259,6 @@ function initMap() {
         });
 
         this.inputPlace = ko.observable("");
-        console.log(this.items());
 
         this.changePlace = ko.observable(function() {
             koMarkers.forEach(function(oldMarker) {
@@ -278,8 +269,21 @@ function initMap() {
             koMarkers = [];
             modalArray = [];
             var newPlace = this.inputPlace();
-            getNewPlace(newPlace);
-        console.log(this.items());
+            
+            var newPlaceURL = "https://maps.googleapis.com/maps/api/geocode/json?address="+newPlace+"&key=AIzaSyDyLw3cQPBIXwwExxqVNBsc9D-4KeVPp8g"
+            $.ajax({
+                url: newPlaceURL,
+                type: 'GET'
+            }).done(function(thisNewPlaceData) {
+                var lat = thisNewPlaceData.results[0].geometry.location.lat;
+                var lng = thisNewPlaceData.results[0].geometry.location.lng;
+                var searchStartPoint = {lat, lng};
+                service.nearbySearch({
+                  location: searchStartPoint,
+                  radius: 500,
+                  type: [typeVariable]
+                }, callback);
+            });
         });
 
         this.makeMarkerType = ko.computed(function() {
