@@ -9,7 +9,7 @@ var bio = {
         "location" : "Pensacola, FL",
     },
     "Skills" : [
-        " HTML5", " &emsp;CSS3", " &emsp;JavaScript", " &emsp;JQuery", " &emsp;KnockoutJS", " &emsp;MySQL", "&emsp;Git", "&emsp;Gulp", " &emsp;Computer_Repair_and_Maintainance"
+        " HTML5", " &emsp;CSS3", " &emsp;JavaScript", " &emsp;JQuery", " &emsp;KnockoutJS", " &emsp;MySQL", "&emsp;Sass", "&emsp;Git", "&emsp;Gulp", " &emsp;Computer_Repair_and_Maintainance"
     ],
     "pictureURL" : "images/longAgo.jpg"
 };
