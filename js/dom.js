@@ -64,6 +64,12 @@ var education = {
             "school" : "Treehouse",
             "dates" : "2/2018",
             "url" : "https://teamtreehouse.com"
+        },
+        {
+            "title" : "Sass Basic Course",
+            "school" : "Treehouse",
+            "dates" : "4/2018",
+            "url" : "https://teamtreehouse.com"
         }
     ]
 };
