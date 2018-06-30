@@ -1,0 +1,3 @@
+* { background-color: lightgray; }
+
+.backGradient { background: -webkit-gradient(linear, left top, left bottom, from(tan), color-stop(#c3b44a), to(tan)); background: linear-gradient(tan, #c3b44a, tan); }

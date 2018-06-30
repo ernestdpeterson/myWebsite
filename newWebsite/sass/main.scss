@@ -1,0 +1,9 @@
+$lg: lightgray;
+
+* {
+    background-color: $lg;
+    // outline: 1px gray solid;
+}
+.backGradient{
+    background: linear-gradient(tan, #c3b44a, tan);
+}
