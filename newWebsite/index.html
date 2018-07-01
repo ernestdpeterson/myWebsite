@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <base href="/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -21,7 +22,7 @@
         <button class="btn btn-secondary">button</button>
     </section>
 
-    <section>
+    <section id="greating" data-bind="visible: greating">
             <h2 class="text-center">
                 Greatings!
             </h2>
@@ -33,7 +34,7 @@
             </p>
     </section>
 
-    <section id="biography">
+    <section id="biography" data-bind="visible: biography">
         <p class="messageBody">
             &emsp;I was born in Litchfield, KY and currently live in Pensacola, FL. My current career is truck driver but after nearly thirty years, and having been to almost every state in the USA, I am seeking a new challenge.<br>
             &emsp;I have always had a fascination with computers and electronics. In high school (South Jones High: Ellisville, MS)   I took my first computer courses (computer lab, and business computers). Although the TRS-80’s that the school had where far from state of the art or consistent in their operation I loved the time I spent on them. <br>
@@ -45,7 +46,7 @@
         </p>
     </section>
 
-    <section id="skillset">
+    <section id="skillset" data-bind="visible: skillset">
         <p class="messageBody">
             &emsp;I have always had a fascination with computers and electronics. In high school (South Jones High: Ellisville, MS)   I took my first computer courses (computer lab, and business computers). Although the TRS-80’s that the school had where far from state of the art or consistent in their operation I loved the time I spent on them. <br>
             &emsp;I bought my first desktop in 1996. I can’t say that I have many fond memories of that system because it was woefully under-powered, horribly unstable and the hard drive was barely big enough to contain the OS (Windows95). This combination did not make for a pleasant experience but it did give me valuable experience with troubleshooting. <br>
@@ -56,7 +57,7 @@
         </p>
     </section>
 
-    <section id="codingExamples" class="carousel slide" data-ride="carousel">
+    <section id="codingExamples" class="carousel slide" data-ride="carousel" data-bind="visible: codingExamples">
         <ol class="carousel-indicators">
             <li data-target="#codingExamples" data-slide-to="0" class="active"></li>
             <li data-target="#codingExamples" data-slide-to="1"></li>
@@ -96,9 +97,8 @@
     </footer>
 
 </div>
-<script src="js/main.js">
-// normalize.css has been removed from the head
-</script>
+<script src="js/main.js"></script>
+<script src="js/KO.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

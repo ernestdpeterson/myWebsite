@@ -40,7 +40,7 @@ var uglify = require('gulp-uglify');
 gulp.task('default', function(done) {
     gulp.watch('sass/**/*.scss', ['styling']);
     gulp.watch('js/**/*.js', ['lint']);
-    gulp.watch(['index.html', 'js/main.js', 'css/main.css']).on('change', browserSync.reload);
+    gulp.watch(['index.html', 'js/*.js', 'css/main.css']).on('change', browserSync.reload);
     browserSync.init({
         server: './'
     });
