@@ -6,7 +6,11 @@ var viewModel = {
     greating: ko.observable(false),
     biography: ko.observable(false),
     skillset: ko.observable(false),
-    codingExamples: ko.observable(false)
+    codingExamples: ko.observable(false),
+
+    displayControl: ko.computed(function() {
+        return 'answer';
+    })
 
 };
 

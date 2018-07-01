@@ -1,5 +1,6 @@
 /*eslint-env jquery*/
 /* exported bio education work */
+
 var bio = {
     'name' : 'Ernest D. Peterson',
     'role' : 'Web Developer',
