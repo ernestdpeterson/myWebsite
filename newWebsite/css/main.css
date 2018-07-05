@@ -1,3 +1,9 @@
-* { background-color: lightgray; }
+* { background-color: lightgray; max-width: 1257px; margin: auto; }
 
 .backGradient { background: -webkit-gradient(linear, left top, left bottom, from(tan), color-stop(#c3b44a), to(tan)); background: linear-gradient(tan, #c3b44a, tan); }
+
+#myName { font-size: 6vw; }
+
+#myTitle { font-size: 3vw; }
+
+#skillsHeader { font-size: 4vw; }

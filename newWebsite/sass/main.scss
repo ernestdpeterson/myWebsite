@@ -3,7 +3,18 @@ $lg: lightgray;
 * {
     background-color: $lg;
     // outline: 1px gray solid;
+    max-width: 1257px;
+    margin: auto;
 }
 .backGradient{
     background: linear-gradient(tan, #c3b44a, tan);
+}
+#myName{
+    font-size: 6vw;
+}
+#myTitle{
+    font-size: 3vw;
+}
+#skillsHeader{
+    font-size: 4vw;
 }

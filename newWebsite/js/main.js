@@ -124,3 +124,4 @@ var work = {
 };
 
 $('#container').css({'display': '100vh'});
+$('#skillsDiv').append(bio.Skills);

@@ -14,15 +14,25 @@
 </head>
 <body>
 <div id="container" class="container-fluid">
-    <header class=".col-xl text-center">
-        <img class='img-thumbnail' src="images/profilePic.JPG" alt='My picture.'><h1>My header</h1>
+    <header class="row text-center">
+        <div class="col-sm">
+            <img class='img-thumbnail' src="images/profilePic.JPG" alt='My picture.'>
+        </div>
+        <div class="col-7">
+            <h1 id='myName' class="font-weight-bold">Ernest D. Peterson</h1>
+            <h4 id="myTitle" class="float-right">Web Developer</h4>
+            <div id="skillsDiv"><br><h1 id="skillsHeader">Skills</h1></div>
+        </div>
     </header>
 
     <section>
-        <button class="btn btn-secondary">button</button>
+        <button id="greeting" class="btn btn-secondary" data-bind="click: displayControl">Greeting</button>
+        <button id="biography" class="btn btn-secondary" data-bind="click: displayControl">Biography</button>
+        <button id="education" class="btn btn-secondary" data-bind="click: displayControl">Education</button>
+        <button id="codingExamples" class="btn btn-secondary" data-bind="click: displayControl">Coding Examples</button>
     </section>
 
-    <section id="greating" data-bind="visible: greating">
+    <section id="greeting" data-bind="visible: greeting">
             <h2 class="text-center">
                 Greatings!
             </h2>
@@ -46,15 +56,10 @@
         </p>
     </section>
 
-    <section id="skillset" data-bind="visible: skillset">
-        <p class="messageBody">
-            &emsp;I have always had a fascination with computers and electronics. In high school (South Jones High: Ellisville, MS)   I took my first computer courses (computer lab, and business computers). Although the TRS-80’s that the school had where far from state of the art or consistent in their operation I loved the time I spent on them. <br>
-            &emsp;I bought my first desktop in 1996. I can’t say that I have many fond memories of that system because it was woefully under-powered, horribly unstable and the hard drive was barely big enough to contain the OS (Windows95). This combination did not make for a pleasant experience but it did give me valuable experience with troubleshooting. <br>
-            &emsp;I built my first computer in 1996 or 1997.  I just couldn’t stand that original desktop system any longer and building one would give my control over the components. My time spent researching and building that system has served me well when upgrading/repairing computers and in the CompTIA+ course I took through University of Phoenix (2014).  <br>
-            &emsp;In 2014 I decided to change careers and started taking online classes to facilitate this change. My first foray into this world was with University of Phoenix but I didn’t agree with their idea of course curriculum. I was looking for a more non-traditional, focused program. I found a good fit, for me, with O’Reilly School of Technology. I decided on database administration and completed the first level (Introduction to Database Administration) where I learned MySQL. When I started the second level; I found that my lack of familiarity with the Linux OS was an issue so I suspended the database course and started Linux Systems Administration to get up to speed. I had no prior experience with Linux but I quickly found that I enjoyed using it more than Windows. I have since installed CentOS on my Desktop and bought a laptop to install it on as well. Unfortunately, before I could complete my courses, O’Reilly closed.<br>
-            &emsp;The combination of experiences with the online education, the further research I had to do when O’Reilly’s closed and the advancement, and proliferation, of online education led me to Udacity. Due to my research I decided that Web Development was a better fit for me because it allowed for creative expression as well as programming.   
- 
-        </p>
+    <section id="education" data-bind="visible: education">
+        <div class="col-6" data-bind="foreach: education.onlineCourses">
+            <span data-bind="text: title"></span>
+        </div>
     </section>
 
     <section id="codingExamples" class="carousel slide" data-ride="carousel" data-bind="visible: codingExamples">
@@ -93,7 +98,7 @@
     </section>
 
     <footer id="theFooter">
-        <p class=".col-xl text-center fixed-bottom">Something in the footer</p>
+        <p class="col-xl text-center fixed-bottom">Something in the footer</p>
     </footer>
 
 </div>

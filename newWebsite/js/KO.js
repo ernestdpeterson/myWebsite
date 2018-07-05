@@ -3,14 +3,32 @@
 var ko;
 
 var viewModel = {
-    greating: ko.observable(false),
+    greeting: ko.observable(true),
     biography: ko.observable(false),
-    skillset: ko.observable(false),
+    education: ko.observable(false),
     codingExamples: ko.observable(false),
 
-    displayControl: ko.computed(function() {
-        return 'answer';
-    })
+    displayControl: function(data, event) {
+        this.greeting(false)
+        this.biography(false)
+        this.education(false)
+        this.codingExamples(false)
+        
+        switch (event.target.id) {
+        case 'greeting':
+            this.greeting(true)
+            break;
+        case 'biography':
+            this.biography(true)
+            break;
+        case 'education':
+            this.education(true)
+            break;
+        case 'codingExamples':
+            this.codingExamples(true)
+            break;
+        }
+    }
 
 };
 
