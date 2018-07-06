@@ -5,13 +5,13 @@ var ko;
 var viewModel = {
     greeting: ko.observable(true),
     biography: ko.observable(false),
-    education: ko.observable(false),
+    schoolWork: ko.observable(false),
     codingExamples: ko.observable(false),
 
     displayControl: function(data, event) {
         this.greeting(false)
         this.biography(false)
-        this.education(false)
+        this.schoolWork(false)
         this.codingExamples(false)
         
         switch (event.target.id) {
@@ -21,8 +21,8 @@ var viewModel = {
         case 'biography':
             this.biography(true)
             break;
-        case 'education':
-            this.education(true)
+        case 'schoolWork':
+            this.schoolWork(true)
             break;
         case 'codingExamples':
             this.codingExamples(true)

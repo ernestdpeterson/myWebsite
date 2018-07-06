@@ -31,20 +31,20 @@ var education = {
         {
             'title' : 'CompTIA A+ and Network+',
             'school' : 'University of Phoenix',
-            'dates' : '2014',
+            'dates' : '6/2014-7/2014',
             'url' : 'http://www.phoenix.edu/'
         },
         {
             'title' : 'Database Administration',
             'school' : 'O\'Reilly School of Technology',
-            'dates' : '2014',
+            'dates' : '10/2014-4/2015',
             'url' : 'http://www.oreillyschool.com/'
 
         },
         {
             'title' : 'Linux Systems Administration',
             'school' : 'O\'Reilly School of Technology',
-            'dates' : '2015',
+            'dates' : '4/2015-7/2015',
             'url' : 'http://www.oreillyschool.com/'
 
         },
@@ -58,14 +58,20 @@ var education = {
         {
             'title' : 'Explore and Master Chrome DevTools',
             'school' : 'Code School',
-            'dates' : '2017',
+            'dates' : '7/2017-7/2017',
             'url' : 'http://discover-devtools.codeschool.com/'
         },
         {
             'title' : 'Beginning WordPress',
             'school' : 'Treehouse',
-            'dates' : '2/2018',
+            'dates' : '2/2018-2/2018',
             'url' : 'https://teamtreehouse.com'
+        },
+        {
+            'title': 'PHP for WordPress',
+            'school': 'Treehouse',
+            'dates': '3/2018-current',
+            'url': 'https://teamtreehouse.com'
         },
         {
             'title' : 'Sass Basic Course',
@@ -124,4 +130,4 @@ var work = {
 };
 
 $('#container').css({'display': '100vh'});
-$('#skillsDiv').append(bio.Skills);
+// $('#skillsDiv').append(bio.Skills);

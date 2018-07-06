@@ -22,15 +22,22 @@
             <h1 id='myName' class="font-weight-bold">Ernest D. Peterson</h1>
             <h4 id="myTitle" class="float-right">Web Developer</h4>
             <div id="skillsDiv"><br><h1 id="skillsHeader">Skills</h1></div>
+            <div class="row" data-bind="foreach: bio.Skills">
+                <h5 data-bind="html: $data"></h5>
+            </div>
         </div>
     </header>
+
+    <br>
 
     <section>
         <button id="greeting" class="btn btn-secondary" data-bind="click: displayControl">Greeting</button>
         <button id="biography" class="btn btn-secondary" data-bind="click: displayControl">Biography</button>
-        <button id="education" class="btn btn-secondary" data-bind="click: displayControl">Education</button>
+        <button id="schoolWork" class="btn btn-secondary" data-bind="click: displayControl">Education</button>
         <button id="codingExamples" class="btn btn-secondary" data-bind="click: displayControl">Coding Examples</button>
     </section>
+
+    <br>
 
     <section id="greeting" data-bind="visible: greeting">
             <h2 class="text-center">
@@ -56,9 +63,14 @@
         </p>
     </section>
 
-    <section id="education" data-bind="visible: education">
-        <div class="col-6" data-bind="foreach: education.onlineCourses">
-            <span data-bind="text: title"></span>
+    <section id="schoolWork" data-bind="visible: schoolWork">
+        <div class="row" data-bind="foreach: education.onlineCourses">
+            <div class="col-6">
+            <span data-bind="text: title"></span><br>
+            <span data-bind="text: school"></span><br>
+            <span data-bind="text: dates"></span><br>
+            <span><a data-bind="attr: {href: url}">Website</a></span><br><br>
+            </div>
         </div>
     </section>
 
@@ -97,8 +109,8 @@
         </a>
     </section>
 
-    <footer id="theFooter">
-        <p class="col-xl text-center fixed-bottom">Something in the footer</p>
+    <footer id="theFooter" class="fixed-bottom">
+        <p class="col-xl text-center">Something in the footer</p>
     </footer>
 
 </div>
