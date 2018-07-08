@@ -1,4 +1,12 @@
-* { background-color: lightgray; max-width: 1257px; margin: auto; }
+* { max-width: 1257px; margin: auto; }
+
+html { height: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
+
+body { position: relative; margin: 0; padding-bottom: 6rem; min-height: 100%; background-color: lightgray; }
+
+#theFooter { position: absolute; left: 0; right: 0; bottom: 0; padding: 1rem; }
 
 .backGradient { background: -webkit-gradient(linear, left top, left bottom, from(tan), color-stop(#c3b44a), to(tan)); background: linear-gradient(tan, #c3b44a, tan); }
 
@@ -7,3 +15,5 @@
 #myTitle { font-size: 3vw; }
 
 #skillsHeader { font-size: 4vw; }
+
+#skillList { font-weight: 100 !important; }

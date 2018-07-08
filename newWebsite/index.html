@@ -22,7 +22,7 @@
             <h1 id='myName' class="font-weight-bold">Ernest D. Peterson</h1>
             <h4 id="myTitle" class="float-right">Web Developer</h4>
             <div id="skillsDiv"><br><h1 id="skillsHeader">Skills</h1></div>
-            <div class="row" data-bind="foreach: bio.Skills">
+            <div class="row no-gutters" data-bind="foreach: bio.Skills">
                 <h5 data-bind="html: $data"></h5>
             </div>
         </div>
@@ -35,6 +35,7 @@
         <button id="biography" class="btn btn-secondary" data-bind="click: displayControl">Biography</button>
         <button id="schoolWork" class="btn btn-secondary" data-bind="click: displayControl">Education</button>
         <button id="codingExamples" class="btn btn-secondary" data-bind="click: displayControl">Coding Examples</button>
+        <button id="workHistory" class="btn btn-secondary" data-bind="click: displayControl">Work History</button>
     </section>
 
     <br>
@@ -74,26 +75,36 @@
         </div>
     </section>
 
-    <section id="codingExamples" class="carousel slide" data-ride="carousel" data-bind="visible: codingExamples">
-    <div class="carousel-inner" data-bind="foreach: carouselArray">
-        <div data-bind="carouselArray.divClass">
-            <h5 class="text-center">Front end Nano-Degree Certificate</h5>
-            <img class="d-block w-25 mx-auto" src="images/FEND.png" alt="Front End Nano Degree pic">
-            <p class="text-center">Click image to lauch app. Click <a href="">HERE</a> to see code on Github.</p>
+    <section id="codingExamples" class="carousel slide carousel-fade" data-ride="carousel" data-bind="visible: codingExamples">
+        <p>My projects: <span data-bind="foreach: carouselArray"><a data-bind="attr: {target: '_blank', href: clickPath}"><span data-bind="text: divTitle"></span></a></span></p>
+
+        <div class="carousel-inner" data-bind="foreach: carouselArray">
+            <div data-bind="attr: {class: divClass}">
+                <h5 class="text-center" data-bind="text: divTitle"></h5>
+                <a data-bind="attr: {target: '_blank', href: clickPath}">
+                    <img class="d-block w-25 mx-auto" data-bind="attr: {src: imageSource, alt: imageaAlt}">
+                </a>
+                <p class="text-center">Click image to lauch app. Click <a data-bind="attr: {target: '_blank', href: gitURL}">HERE</a> to see code on Github.</p>
+            </div>
         </div>
-    </div>
-        <a class="carousel-control-prev" href="#codingExamples" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#codingExamples" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </section>
 
-    <footer id="theFooter" class="fixed-bottom">
-        <p class="col-xl text-center">Something in the footer</p>
+    <section id="workHistory"  data-bind="visible: workHistory">
+        <div class="row" data-bind="foreach: work">
+            <div class="col-6">
+                <span data-bind="text: employer"></span><br>
+                <span data-bind="text: title"></span><br>
+                <span data-bind="text: location"></span><br>
+                <span data-bind="text: dates"></span><br>
+                <span data-bind="html: description"></span><br><br>
+            </div>
+        </div>
+    </section>
+
+    <footer id="theFooter" class="col-xl">
+        <p class="col-xl text-center">
+            Many thanks to <a href="https://chrisbracco.com/css-sticky-footer-effect/">Chris Bracco</a> for providing the code for this "Sticky Footer"!
+        </p>
     </footer>
 
 </div>
