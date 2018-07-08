@@ -75,28 +75,11 @@
     </section>
 
     <section id="codingExamples" class="carousel slide" data-ride="carousel" data-bind="visible: codingExamples">
-        <ol class="carousel-indicators">
-            <li data-target="#codingExamples" data-slide-to="0" class="active"></li>
-            <li data-target="#codingExamples" data-slide-to="1"></li>
-            <li data-target="#codingExamples" data-slide-to="2"></li>
-            <li data-target="#codingExamples" data-slide-to="3"></li>
-            <li data-target="#codingExamples" data-slide-to="4"></li>
-        </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-25 mx-auto" src="images/FEND.png" alt="Front End Nano Degree">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-25 mx-auto" src="images/googleKO.png" alt="Google Maps API">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-25 mx-auto" src="images/Screenshot3.png" alt="Simple frogger clone">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-25 mx-auto" src="images/Screenshot4.png" alt="Screenshot of my website">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-25 mx-auto" src="images/resume.png" alt="My resume">
+    <div class="carousel-inner" data-bind="foreach: carouselArray">
+        <div data-bind="carouselArray.divClass">
+            <h5 class="text-center">Front end Nano-Degree Certificate</h5>
+            <img class="d-block w-25 mx-auto" src="images/FEND.png" alt="Front End Nano Degree pic">
+            <p class="text-center">Click image to lauch app. Click <a href="">HERE</a> to see code on Github.</p>
         </div>
     </div>
         <a class="carousel-control-prev" href="#codingExamples" role="button" data-slide="prev">

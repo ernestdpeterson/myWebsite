@@ -1,5 +1,5 @@
 /*eslint-env jquery*/
-/* exported bio education work */
+/* exported bio education work carouselArray */
 
 var bio = {
     'name' : 'Ernest D. Peterson',
@@ -11,7 +11,7 @@ var bio = {
         'location' : 'Pensacola, FL',
     },
     'Skills' : [
-        ' HTML5', ' &emsp;CSS3', ' &emsp;JavaScript', ' &emsp;JQuery', ' &emsp;KnockoutJS', ' &emsp;MySQL', '&emsp;Sass', '&emsp;Git', '&emsp;Gulp', ' &emsp;Computer_Repair_and_Maintainance'
+        ' HTML5', ' &emsp;CSS3', ' &emsp;JavaScript', ' &emsp;JQuery', ' &emsp;KnockoutJS', ' &emsp;MySQL', '&emsp;Sass', '&emsp;Git', '&emsp;Gulp', '&emsp;Bootstrap', ' &emsp;Computer_Repair_and_Maintainance'
     ],
     'pictureURL' : 'images/longAgo.jpg'
 };
@@ -129,5 +129,37 @@ var work = {
     ]
 };
 
-$('#container').css({'display': '100vh'});
-// $('#skillsDiv').append(bio.Skills);
+var carouselArray = [
+    {
+        'divClass': 'carousel-item active',
+        'divTitle': 'Simple Frogger Clone',
+        'clickPath': 'froggerClone/index.html'
+        'imageSource': 'images/froggerClone.png',
+        'imageaAlt': 'Screenshot of frogger clone game',
+        'gitURL': 'https://github.com/ernestdpeterson/Frogger'
+    },
+    {
+        'divClass': 'carousel-item',
+        'divTitle': 'Google Maps API with KnockoutJS',
+        'clickPath': 'googleMaps/ko.html',
+        'imageSource': 'images/googleKO.png',
+        'imageaAlt': 'Screenshot of a google map',
+        'gitURL': 'https://github.com/ernestdpeterson/googleMaps'
+    },
+    {
+        'divClass': 'carousel-item',
+        'divTitle': 'My Website',
+        'clickPath': 'index.html',
+        'imageSource': 'images/website.png',
+        'imageaAlt': 'Screenshot of this website',
+        'gitURL': 'https://github.com/ernestdpeterson/myWebsite/tree/master/newWebsite'
+    }//,
+    // {
+    //     'divClass': 'carousel-item',
+    //     'divTitle': '',
+    //     'clickPath': '',
+    //     'imageSource': '',
+    //     'imageaAlt': '',
+    //     'gitURL': ''
+    // }
+    ];

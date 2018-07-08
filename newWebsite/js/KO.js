@@ -29,7 +29,6 @@ var viewModel = {
             break;
         }
     }
-
 };
 
 ko.applyBindings(viewModel);
