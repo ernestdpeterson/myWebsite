@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="shortcut icon" type="image/png" href="images/smiley.gif">
-    <title>Portfolio</title>
+    <title>My Resum&#233; Site</title>
 </head>
 <body>
 <div id="container" class="container-fluid">
@@ -22,7 +22,7 @@
             <h1 id='myName' class="font-weight-bold">Ernest D. Peterson</h1>
             <h4 id="myTitle" class="float-right">Web Developer</h4>
             <div id="skillsDiv"><br><h1 id="skillsHeader">Skills</h1></div>
-            <div class="row no-gutters" data-bind="foreach: bio.Skills">
+            <div class="row no-gutters skillsList" data-bind="foreach: bio.Skills">
                 <h5 data-bind="html: $data"></h5>
             </div>
         </div>
@@ -32,27 +32,40 @@
 
     <section>
         <button id="greeting" class="btn btn-secondary" data-bind="click: displayControl">Greeting</button>
+
         <button id="biography" class="btn btn-secondary" data-bind="click: displayControl">Biography</button>
+
         <button id="schoolWork" class="btn btn-secondary" data-bind="click: displayControl">Education</button>
+
         <button id="codingExamples" class="btn btn-secondary" data-bind="click: displayControl">Coding Examples</button>
+
         <button id="workHistory" class="btn btn-secondary" data-bind="click: displayControl">Work History</button>
+        
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Me</button>
+            <div class="dropdown-menu dropdownStyle" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="tel: 6013074377">Call (601)307-4377</a>
+                <a class="dropdown-item" href="mailto:ernest@ernestpeterson.com">Email</a>
+                <a class="dropdown-item" target="_blank" href="http://www.linkedin.com/in/ernest-peterson-2b9ab410a/">LinkedIn</a>
+                <a class="dropdown-item" target="_blank" href="https://github.com/ernestdpeterson">Github</a>
+            </div>
     </section>
 
     <br>
 
-    <section id="greeting" data-bind="visible: greeting">
+    <section id="greeting" class="bottomPadding" data-bind="visible: greeting">
             <h2 class="text-center">
                 Greatings!
             </h2>
             <p class="text-left">
                 &emsp;Thank you for visiting my website. <br><br>
-                &emsp;It has been a very interesting journey for me to build it. The practical application of my web development knowledge, gained from the <a href="https://www.udacity.com">Udacity</a> course materials and other resources, has been immensely rewarding.<br><br>
-                &emsp;I am enjoying the creative and technical processes of web development and am looking forward to starting my career as a Web Developer.
+                &emsp;It has been a very interesting journey for me to build it. The practical application of my web development knowledge, gained from the <a href="https://www.udacity.com">Udacity</a> course materials and other resources, has been immensely rewarding.
+                <br><br>
+                &emsp;I am enjoying the creative and technical processes of web development and am looking forward to starting my career as a Web Developer. I hope that you enjoy what I have built and I would enjoy hearing from you.
 
             </p>
     </section>
 
-    <section id="biography" data-bind="visible: biography">
+    <section id="biography" class="bottomPadding" data-bind="visible: biography">
         <p class="messageBody">
             &emsp;I was born in Litchfield, KY and currently live in Pensacola, FL. My current career is truck driver but after nearly thirty years, and having been to almost every state in the USA, I am seeking a new challenge.<br>
             &emsp;I have always had a fascination with computers and electronics. In high school (South Jones High: Ellisville, MS)   I took my first computer courses (computer lab, and business computers). Although the TRS-80’s that the school had where far from state of the art or consistent in their operation I loved the time I spent on them. <br>
@@ -64,7 +77,7 @@
         </p>
     </section>
 
-    <section id="schoolWork" data-bind="visible: schoolWork">
+    <section id="schoolWork" class="bottomPadding" data-bind="visible: schoolWork">
         <div class="row" data-bind="foreach: education.onlineCourses">
             <div class="col-6">
             <span data-bind="text: title"></span><br>
@@ -75,7 +88,7 @@
         </div>
     </section>
 
-    <section id="codingExamples" class="carousel slide carousel-fade" data-ride="carousel" data-bind="visible: codingExamples">
+    <section id="codingExamples" class="carousel slide carousel-fade bottomPadding" data-ride="carousel" data-bind="visible: codingExamples">
         <p>My projects: <span data-bind="foreach: carouselArray"><a data-bind="attr: {target: '_blank', href: clickPath}"><span data-bind="text: divTitle"></span></a></span></p>
 
         <div class="carousel-inner" data-bind="foreach: carouselArray">
@@ -89,7 +102,7 @@
         </div>
     </section>
 
-    <section id="workHistory"  data-bind="visible: workHistory">
+    <section id="workHistory"  class="bottomPadding" data-bind="visible: workHistory">
         <div class="row" data-bind="foreach: work">
             <div class="col-6">
                 <span data-bind="text: employer"></span><br>
@@ -101,10 +114,24 @@
         </div>
     </section>
 
-    <footer id="theFooter" class="col-xl">
+    <footer id="theFooter" class="col-xl"">
+        <div class="row footerColor">
+        <div class="col-2"">
+            <a href="mailto:ernest@ernestpeterson.com">Email Me</a>
+            <br><br>
+            <a target="_blank" href="http://www.linkedin.com/in/ernest-peterson-2b9ab410a/">My LinkedIn</a>
+        </div>
+        <div class="col-6"">
         <p class="col-xl text-center">
+            Site built with <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="http://knockoutjs.com/">KnockoutJS</a>, HTML5, CSS3, Sass, JavaScript and Gulp.
+            <br>
             Many thanks to <a href="https://chrisbracco.com/css-sticky-footer-effect/">Chris Bracco</a> for providing the code for this "Sticky Footer"!
         </p>
+        </div>
+        <div class="col-3">
+            <p>Site updated: 07/04/2018</p>
+        </div>
+        </div>
     </footer>
 
 </div>

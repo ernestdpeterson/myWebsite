@@ -77,7 +77,7 @@ gulp.task('lint', function() {
         .pipe(eslint.failOnError());
 });
 
-gulp.task('imDone', function(done) {
+gulp.task('Done', function(done) {
     gulp.src('./index.html')
         .pipe((gulp.dest('distribution')));
     gulp.src('css/main.css').pipe(gulp.dest('distribution/css'));

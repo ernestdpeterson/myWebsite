@@ -5,17 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="charStyle.css">
-    <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="images/smiley.gif">
+    <title>My Resum&#233; Site</title>
 </head>
 <body>
-<div id="container">
-    <header></header>
-    <section></section>
-    <footer></footer>
+<div id="container" class="container-fluid">
+    <header class="row text-center">
+        <div class="col-sm">
+            <img class='img-thumbnail' src="images/profilePic.JPG" alt='My picture.'>
+        </div>
+        <div class="col-7">
+            <h1 id='myName' class="font-weight-bold">Ernest D. Peterson</h1>
+            <h4 id="myTitle" class="float-right">Web Developer</h4>
+            <div id="skillsDiv"><br><h1 id="skillsHeader">Skills</h1></div>
+            <div class="row no-gutters skillsList" data-bind="foreach: bio.Skills">
+                <h5 data-bind="html: $data"></h5>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+    <section>
+        <button id="greeting" class="btn btn-secondary" data-bind="click: displayControl">Greeting</button>
+
+        <button id="biography" class="btn btn-secondary" data-bind="click: displayControl">Biography</button>
+
+        <button id="schoolWork" class="btn btn-secondary" data-bind="click: displayControl">Education</button>
+
+        <button id="codingExamples" class="btn btn-secondary" data-bind="click: displayControl">Coding Examples</button>
+
+        <button id="workHistory" class="btn btn-secondary" data-bind="click: displayControl">Work History</button>
+        
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Me</button>
+            <div class="dropdown-menu dropdownStyle" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="tel: 6013074377">Call (601)307-4377</a>
+                <a class="dropdown-item" href="mailto:ernest@ernestpeterson.com">Email</a>
+                <a class="dropdown-item" target="_blank" href="http://www.linkedin.com/in/ernest-peterson-2b9ab410a/">LinkedIn</a>
+                <a class="dropdown-item" target="_blank" href="https://github.com/ernestdpeterson">Github</a>
+            </div>
+    </section>
+
+    <br>
+
+    <section id="greeting" class="bottomPadding" data-bind="visible: greeting">
+            <h2 class="text-center">
+                Greatings!
+            </h2>
+            <p class="text-left">
+                &emsp;Thank you for visiting my website. <br><br>
+                &emsp;It has been a very interesting journey for me to build it. The practical application of my web development knowledge, gained from the <a href="https://www.udacity.com">Udacity</a> course materials and other resources, has been immensely rewarding.
+                <br><br>
+                &emsp;I am enjoying the creative and technical processes of web development and am looking forward to starting my career as a Web Developer. I hope that you enjoy what I have built and I would enjoy hearing from you.
+
+            </p>
+    </section>
+
+    <section id="biography" class="bottomPadding" data-bind="visible: biography">
+        <p class="messageBody">
+            &emsp;I was born in Litchfield, KY and currently live in Pensacola, FL. My current career is truck driver but after nearly thirty years, and having been to almost every state in the USA, I am seeking a new challenge.<br>
+            &emsp;I have always had a fascination with computers and electronics. In high school (South Jones High: Ellisville, MS)   I took my first computer courses (computer lab, and business computers). Although the TRS-80’s that the school had where far from state of the art or consistent in their operation I loved the time I spent on them. <br>
+            &emsp;I bought my first desktop in 1996. I can’t say that I have many fond memories of that system because it was woefully under-powered, horribly unstable and the hard drive was barely big enough to contain the OS (Windows95). This combination did not make for a pleasant experience but it did give me valuable experience with troubleshooting. <br>
+            &emsp;I built my first computer in 1996 or 1997.  I just couldn’t stand that original desktop system any longer and building one would give my control over the components. My time spent researching and building that system has served me well when upgrading/repairing computers and in the CompTIA+ course I took through University of Phoenix (2014).  <br>
+            &emsp;In 2014 I decided to change careers and started taking online classes to facilitate this change. My first foray into this world was with University of Phoenix (Computer Science) but I didn’t agree with their idea of course curriculum. I was looking for a more non-traditional, focused program. I found a good fit, for me, with O’Reilly School of Technology. I decided on database administration and completed the first level (Introduction to Database Administration) where I learned MySQL. When I started the second level; I found that my lack of familiarity with the Linux OS was an issue so I suspended the database course and started Linux Systems Administration to get up to speed. I had no prior experience with Linux but I quickly found that I enjoyed using it more than Windows. I have since installed CentOS on my Desktop and bought a laptop to install it on as well. Unfortunately, before I could complete my courses, O’Reilly closed.<br>
+            &emsp;The combination of experiences with the online education, the further research I had to do when O’Reilly’s closed and the advancement, and proliferation, of online education led me to Udacity. Thanks to my research and experiences I decided that Web Development was a better fit for me since it allowed for creative expression as well as programming.   
+ 
+        </p>
+    </section>
+
+    <section id="schoolWork" class="bottomPadding" data-bind="visible: schoolWork">
+        <div class="row" data-bind="foreach: education.onlineCourses">
+            <div class="col-6">
+            <span data-bind="text: title"></span><br>
+            <span data-bind="text: school"></span><br>
+            <span data-bind="text: dates"></span><br>
+            <span><a data-bind="attr: {href: url}">Website</a></span><br><br>
+            </div>
+        </div>
+    </section>
+
+    <section id="codingExamples" class="carousel slide carousel-fade bottomPadding" data-ride="carousel" data-bind="visible: codingExamples">
+        <p>My projects: <span data-bind="foreach: carouselArray"><a data-bind="attr: {target: '_blank', href: clickPath}"><span data-bind="text: divTitle"></span></a></span></p>
+
+        <div class="carousel-inner" data-bind="foreach: carouselArray">
+            <div data-bind="attr: {class: divClass}">
+                <h5 class="text-center" data-bind="text: divTitle"></h5>
+                <a data-bind="attr: {target: '_blank', href: clickPath}">
+                    <img class="d-block w-25 mx-auto" data-bind="attr: {src: imageSource, alt: imageaAlt}">
+                </a>
+                <p class="text-center">Click image to lauch app. Click <a data-bind="attr: {target: '_blank', href: gitURL}">HERE</a> to see code on Github.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="workHistory"  class="bottomPadding" data-bind="visible: workHistory">
+        <div class="row" data-bind="foreach: work">
+            <div class="col-6">
+                <span data-bind="text: employer"></span><br>
+                <span data-bind="text: title"></span><br>
+                <span data-bind="text: location"></span><br>
+                <span data-bind="text: dates"></span><br>
+                <span data-bind="html: description"></span><br><br>
+            </div>
+        </div>
+    </section>
+
+    <footer id="theFooter" class="col-xl"">
+        <div class="row footerColor">
+        <div class="col-2"">
+            <a href="mailto:ernest@ernestpeterson.com">Email Me</a>
+            <br><br>
+            <a target="_blank" href="http://www.linkedin.com/in/ernest-peterson-2b9ab410a/">My LinkedIn</a>
+        </div>
+        <div class="col-6"">
+        <p class="col-xl text-center">
+            Site built with <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="http://knockoutjs.com/">KnockoutJS</a>, HTML5, CSS3, Sass, JavaScript and Gulp.
+            <br>
+            Many thanks to <a href="https://chrisbracco.com/css-sticky-footer-effect/">Chris Bracco</a> for providing the code for this "Sticky Footer"!
+        </p>
+        </div>
+        <div class="col-3">
+            <p>Site updated: 07/04/2018</p>
+        </div>
+        </div>
+    </footer>
+
 </div>
-<script>
-// normalize.css has been removed from the head
-</script>
+<script src="js/main.js"></script>
+<script src="js/KO.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>

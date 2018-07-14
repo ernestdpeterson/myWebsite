@@ -8,7 +8,7 @@ var bio = {
         'github' : 'https://github.com/ernestdpeterson',
         'mobile' : '601-307-4377',
         'email' : 'ernest@ernestpeterson.com',
-        'location' : 'Pensacola, FL',
+        'linkedin' : 'http://www.linkedin.com/in/ernest-peterson-2b9ab410a/'
     },
     'Skills' : [
         ' HTML5', ' &emsp;CSS3', ' &emsp;JavaScript', ' &emsp;JQuery', ' &emsp;KnockoutJS', ' &emsp;MySQL', '&emsp;Sass', '&emsp;Git', '&emsp;Gulp', '&emsp;Bootstrap', ' &emsp;Computer_Repair_and_Maintainance'
