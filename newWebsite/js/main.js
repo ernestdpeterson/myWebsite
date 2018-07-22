@@ -73,6 +73,13 @@ var education = {
             'url': 'https://teamtreehouse.com'
         },
         {
+            'title' : 'Front End Frameworks',
+            'school' : 'Udacity',
+            'dates' : '7/2018-current',
+            'url' : 'https://www.udacity.com/',
+            'screenShot' : 'images/udacityFEND.pdf'
+        },
+        {
             'title' : 'Sass Basic Course',
             'school' : 'Treehouse',
             'dates' : '4/2018-4/2018',
