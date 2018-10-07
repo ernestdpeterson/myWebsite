@@ -36,6 +36,8 @@ var eslint = require('gulp-eslint');
 var concat = require('gulp-concat');
 // npm install --save-dev gulp-uglify
 var uglify = require('gulp-uglify');
+// npm install --save gulp-uglifycss
+var uglifycss = require('gulp-uglifycss');
 
 gulp.task('default', function(done) {
     gulp.watch('sass/**/*.scss', ['styling']);
@@ -80,9 +82,13 @@ gulp.task('lint', function() {
 gulp.task('Done', function(done) {
     gulp.src('./index.html')
         .pipe((gulp.dest('distribution')));
-    gulp.src('css/main.css').pipe(gulp.dest('distribution/css'));
+    gulp.src('css/main.css')
+        .pipe(uglifycss({
+            "maxLineLen": 80,
+            "uglyComments": true
+        }))
+        .pipe(gulp.dest('distribution/css'));
     gulp.src('js/**/*.js')
-        .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('distribution/js'));
     gulp.src('images/*')

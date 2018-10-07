@@ -1,29 +1,9 @@
-* { max-width: 1257px; margin: auto; }
-
-html { height: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-*, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
-
-body { position: relative; margin: 0; padding-bottom: 6rem; min-height: 100%; background-color: lightgray; }
-
-#theFooter { position: absolute; left: 0; right: 0; bottom: 0; padding: 1rem 1rem 0rem 1rem; }
-
-.mainPic { -webkit-box-shadow: 7px 7px #bababa; box-shadow: 7px 7px #bababa; }
-
-#myName { font-size: 6vw; text-shadow: 2px 2px 2px white; }
-
-#myTitle { font-size: 3vw; text-shadow: 2px 2px 2px white; }
-
-#skillsHeader { font-size: 4vw; color: #818182; text-shadow: -1px 0 #353535, 0 1px #353535; }
-
-.bottomPadding { padding-bottom: 20px; }
-
-.skillsList { background-color: #dbdbdb; border: 1px solid; border-radius: 5px; border-color: #dbdbdb; -webkit-box-shadow: -1px 0 #878787, 0 1px #878787; box-shadow: -1px 0 #878787, 0 1px #878787; }
-
-.dropdownStyle { border-style: double; border-width: 5px; border-radius: 10px; border-color: blue; -webkit-box-shadow: 10px 10px 5px #545454; box-shadow: 10px 10px 5px #545454; background-color: #adadad; }
-
-.workBorder { border: 2px solid; border-radius: 5px; border-color: #6c757d; }
-
-.extraPadding { margin: 0 2px 0 2px; }
-
-.footerColor { background: #cbcbcb; }
+*{max-width:1257px;margin:auto}html{height:100%;-webkit-box-sizing:border-box;box-sizing:border-box}
+*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}body{position:relative;margin:0;padding-bottom:6rem;min-height:100%;background-color:lightgray}
+#theFooter{position:absolute;left:0;right:0;bottom:0;padding:1rem 1rem 0 1rem}.mainPic{-webkit-box-shadow:7px 7px #bababa;box-shadow:7px 7px #bababa}
+#myName{font-size:6vw;text-shadow:2px 2px 2px white}#myTitle{font-size:3vw;text-shadow:2px 2px 2px white}
+#skillsHeader{font-size:4vw;color:#818182;text-shadow:-1px 0 #353535,0 1px #353535}
+.bottomPadding{padding-bottom:20px}.skillsList{background-color:#dbdbdb;border:1px solid;border-radius:5px;border-color:#dbdbdb;-webkit-box-shadow:-1px 0 #878787,0 1px #878787;box-shadow:-1px 0 #878787,0 1px #878787}
+.dropdownStyle{border-style:double;border-width:5px;border-radius:10px;border-color:blue;-webkit-box-shadow:10px 10px 5px #545454;box-shadow:10px 10px 5px #545454;background-color:#adadad}
+.workBorder{border:2px solid;border-radius:5px;border-color:#6c757d}.extraPadding{margin:0 2px 0 2px}
+.footerColor{background:#cbcbcb}
