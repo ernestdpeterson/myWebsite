@@ -16,7 +16,7 @@
 <div id="container" class="container-fluid">
     <header class="row text-center">
         <div class="col-sm">
-            <img class='img-thumbnail' src="images/profilePic.JPG" alt='My picture.'>
+            <img class='img-thumbnail mainPic' src="images/profilePic.JPG" alt='My picture.'>
         </div>
         <div class="col-7">
             <h1 id='myName' class="font-weight-bold">Ernest D. Peterson</h1>
@@ -79,7 +79,7 @@
 
     <section id="schoolWork" class="bottomPadding" data-bind="visible: schoolWork">
         <div class="row" data-bind="foreach: education.onlineCourses">
-            <div class="col-6">
+            <div class="col-6 workBorder">
             <span data-bind="text: title"></span><br>
             <span data-bind="text: school"></span><br>
             <span data-bind="text: dates"></span><br>
@@ -89,7 +89,7 @@
     </section>
 
     <section id="codingExamples" class="carousel slide carousel-fade bottomPadding" data-ride="carousel" data-bind="visible: codingExamples">
-        <p>My projects: <span data-bind="foreach: carouselArray"><a data-bind="attr: {target: '_blank', href: clickPath}"><span data-bind="text: divTitle"></span></a></span></p>
+        <p>My example projects: <span data-bind="foreach: carouselArray"><a data-bind="attr: {target: '_blank', href: clickPath}"><button data-bind="text: divTitle" class="btn btn-secondary extraPadding"></button></a></span></p>
 
         <div class="carousel-inner" data-bind="foreach: carouselArray">
             <div data-bind="attr: {class: divClass}">
@@ -104,7 +104,7 @@
 
     <section id="workHistory"  class="bottomPadding" data-bind="visible: workHistory">
         <div class="row" data-bind="foreach: work">
-            <div class="col-6">
+            <div class="col-6 workBorder">
                 <span data-bind="text: employer"></span><br>
                 <span data-bind="text: title"></span><br>
                 <span data-bind="text: location"></span><br>

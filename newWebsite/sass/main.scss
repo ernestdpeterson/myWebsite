@@ -26,23 +26,33 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+}
+.mainPic{
+    box-shadow: 7px 7px darken($lg, 10%);
 }
 #myName{
     font-size: 6vw;
+    text-shadow: 2px 2px 2px white;
 }
 #myTitle{
     font-size: 3vw;
+    text-shadow: 2px 2px 2px white;
 }
 #skillsHeader{
     font-size: 4vw;
     color: #818182;
+    text-shadow: -1px 0 darken(#818182, 30%), 0 1px darken(#818182, 30%);
 }
 .bottomPadding{
     padding-bottom: 20px;
 }
 .skillsList{
     background-color: lighten($lg, 3%);
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: lighten($lg, 3%);
+    box-shadow: -1px 0 darken($lg, 30%), 0 1px darken($lg, 30%);
 }
 .dropdownStyle{
     border-style: double;
@@ -51,6 +61,14 @@ body {
     border-color: blue;
     box-shadow: 10px 10px 5px darken($lg, 50%);
     background-color: darken($lg, 15%);
+}
+.workBorder{
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #6c757d;
+}
+.extraPadding{
+    margin: 0 2px 0 2px;
 }
 .footerColor{
     background:  darken($lg, 3%);
