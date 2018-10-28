@@ -66,24 +66,30 @@ var education = {
             'dates' : '2/2018-2/2018',
             'url' : 'https://teamtreehouse.com'
         },
-        {
-            'title': 'PHP for WordPress',
-            'school': 'Treehouse',
-            'dates': '3/2018-current',
-            'url': 'https://teamtreehouse.com'
-        },
-        {
-            'title' : 'Front End Frameworks',
-            'school' : 'Udacity',
-            'dates' : '7/2018-current',
-            'url' : 'https://www.udacity.com/',
-            'screenShot' : 'images/udacityFEND.pdf'
-        },
+        // {
+        //     'title': 'PHP for WordPress',
+        //     'school': 'Treehouse',
+        //     'dates': '3/2018-current',
+        //     'url': 'https://teamtreehouse.com'
+        // },
+        // {
+        //     'title' : 'Front End Frameworks',
+        //     'school' : 'Udacity',
+        //     'dates' : '7/2018-current',
+        //     'url' : 'https://www.udacity.com/',
+        //     'screenShot' : 'images/udacityFEND.pdf'
+        // },
         {
             'title' : 'Sass Basic Course',
             'school' : 'Treehouse',
             'dates' : '4/2018-4/2018',
             'url' : 'https://teamtreehouse.com'
+        },
+        {
+            'title' : 'Learn and Master JavaScript'.
+            'school' : 'Udemy',
+            'dates' : '10/2018-Now',
+            'url' : 'https://www.udemy.com'
         }
     ]
 };
