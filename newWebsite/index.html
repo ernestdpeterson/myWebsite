@@ -52,7 +52,7 @@
 
     <br>
 
-    <section id="greeting" class="bottomPadding" data-bind="visible: greeting">
+    <section id="Greeting" class="bottomPadding" data-bind="visible: Greeting">
             <h2 class="text-center">
                 Greatings!
             </h2>
@@ -65,7 +65,7 @@
             </p>
     </section>
 
-    <section id="biography" class="bottomPadding" data-bind="visible: biography">
+    <section id="Biography" class="bottomPadding" data-bind="visible: Biography">
         <p class="messageBody">
             &emsp;I was born in Litchfield, KY and currently live in Pensacola, FL. My current career is truck driver but after nearly thirty years, and having been to almost every state in the USA, I am seeking a new challenge.<br>
             &emsp;I have always had a fascination with computers and electronics. In high school (South Jones High: Ellisville, MS)   I took my first computer courses (computer lab, and business computers). Although the TRS-80’s that the school had where far from state of the art or consistent in their operation I loved the time I spent on them. <br>
@@ -77,7 +77,7 @@
         </p>
     </section>
 
-    <section id="schoolWork" class="bottomPadding" data-bind="visible: schoolWork">
+    <section id="SchoolWork" class="bottomPadding" data-bind="visible: SchoolWork">
         <div class="row" data-bind="foreach: education.onlineCourses">
             <div class="col-6 workBorder">
             <span data-bind="text: title"></span><br>
@@ -88,33 +88,47 @@
         </div>
     </section>
 
-    <section id="codingExamples" class="carousel slide carousel-fade bottomPadding" data-ride="carousel" data-bind="visible: codingExamples">
-        <p>My example projects: <span data-bind="foreach: carouselArray"><a data-bind="attr: {target: '_blank', href: clickPath}"><button data-bind="text: divTitle" class="btn btn-secondary extraPadding"></button></a></span></p>
+    <section id="CodingExamples" class="carousel slide carousel-fade bottomPadding" data-ride="carousel" data-bind="visible: CodingExamples">
 
         <div class="carousel-inner" data-bind="foreach: carouselArray">
             <div data-bind="attr: {class: divClass}">
                 <h5 class="text-center" data-bind="text: divTitle"></h5>
                 <a data-bind="attr: {target: '_blank', href: clickPath}">
-                    <img class="d-block w-25 mx-auto" data-bind="attr: {src: imageSource, alt: imageaAlt}">
+                    <img class="d-block w-10 mx-auto" data-bind="attr: {src: imageSource, alt: imageaAlt}">
                 </a>
                 <p class="text-center">Click image to lauch app. Click <a data-bind="attr: {target: '_blank', href: gitURL}">HERE</a> to see code on Github.</p>
             </div>
         </div>
     </section>
+    <section data-bind="visible: CodingExamples">
+        <div class="row" data-bind="foreach: carouselArray" >
+            <div class= 'row codingDisplay'>
+                <a class="adjustMargin" data-bind="attr: {target: '_blank', href: clickPath}">
+                    <img class="w-10" data-bind="attr: {src: imageSource, alt: imageaAlt}">
+                </a>
+                    <h4 class="adjustMargin" data-bind="text: divTitle">
+                    </h4>
+                    <ul class="adjustMargin" data-bind="foreach: $data.description">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+            </div>
+        </div>
+    </section>
 
-    <section id="workHistory"  class="bottomPadding" data-bind="visible: workHistory">
+    <section id="WorkHistory"  class="bottomPadding" data-bind="visible: WorkHistory">
         <div class="row" data-bind="foreach: work">
             <div class="col-6 workBorder">
-                <span data-bind="text: employer"></span><br>
-                <span data-bind="text: title"></span><br>
-                <span data-bind="text: location"></span><br>
-                <span data-bind="text: dates"></span><br>
-                <span data-bind="html: description"></span><br><br>
+                <h2 data-bind="text: employer"></h2><br>
+                <h5 data-bind="text: 'Title: ' + title"></h5><br>
+                <span data-bind="text: 'Location: ' + location"></span><br>
+                <span data-bind="text: 'Dates: ' + dates"></span><br>
+                <span data-bind="html: '<h4>Responsibilities: </h4>' + description"></span><br><br>
             </div>
         </div>
     </section>
 
     <footer id="theFooter" class="col-xl"">
+        <hr>
         <div class="row footerColor">
         <div class="col-2"">
             <a href="mailto:ernest@ernestpeterson.com">Email Me</a>
@@ -129,7 +143,7 @@
         </p>
         </div>
         <div class="col-3">
-            <p>Site updated: 07/04/2018</p>
+            <p>Site updated: 11/03/2018</p>
         </div>
         </div>
     </footer>

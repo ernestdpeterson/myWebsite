@@ -86,7 +86,7 @@ var education = {
             'url' : 'https://teamtreehouse.com'
         },
         {
-            'title' : 'Learn and Master JavaScript'.
+            'title' : 'Learn and Master JavaScript',
             'school' : 'Udemy',
             'dates' : '10/2018-Now',
             'url' : 'https://www.udemy.com'
@@ -145,16 +145,19 @@ var carouselArray = [
         'divTitle': 'Simple Frogger Clone ',
         'clickPath': 'froggerClone/index.html',
         'imageSource': 'images/froggerClone.png',
-        'imageaAlt': 'Screenshot of frogger clone game',
-        'gitURL': 'https://github.com/ernestdpeterson/Frogger'
+        'imageaAlt': 'Screen shot of frogger clone game',
+        'gitURL': 'https://github.com/ernestdpeterson/Frogger',
+        'description': ['Object Oriented Programming', 'Re-Factoring Game Code', 'Adding New Game Features']
+        
     },
     {
         'divClass': 'carousel-item',
-        'divTitle': 'Google Maps API with KnockoutJS ',
+        'divTitle': 'Google Maps API',
         'clickPath': 'googleMaps/ko.html',
         'imageSource': 'images/googleKO.png',
         'imageaAlt': 'Screenshot of a google map',
-        'gitURL': 'https://github.com/ernestdpeterson/googleMaps'
+        'gitURL': 'https://github.com/ernestdpeterson/googleMaps',
+        'description': ['Google API\'s', 'KnockoutJS', 'AJAX']
     },
     {
         'divClass': 'carousel-item',
@@ -162,7 +165,8 @@ var carouselArray = [
         'clickPath': 'index.html',
         'imageSource': 'images/website.png',
         'imageaAlt': 'Screenshot of this website',
-        'gitURL': 'https://github.com/ernestdpeterson/myWebsite/tree/master/newWebsite'
+        'gitURL': 'https://github.com/ernestdpeterson/myWebsite/tree/master/newWebsite',
+        'description': ['Host Gator Web Hosting', 'FileZilla Upload Manager', 'Bootstrap', 'SASS', 'KnockoutJS']
     }//,
     // {
     //     'divClass': 'carousel-item',

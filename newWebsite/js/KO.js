@@ -3,34 +3,34 @@
 var ko;
 
 var viewModel = {
-    greeting: ko.observable(true),
-    biography: ko.observable(false),
-    schoolWork: ko.observable(false),
-    codingExamples: ko.observable(false),
-    workHistory: ko.observable(false),
+    Greeting: ko.observable(true),
+    Biography: ko.observable(false),
+    SchoolWork: ko.observable(false),
+    CodingExamples: ko.observable(false),
+    WorkHistory: ko.observable(false),
 
     displayControl: function(data, event) {
-        this.greeting(false)
-        this.biography(false)
-        this.schoolWork(false)
-        this.codingExamples(false)
-        this.workHistory(false)
+        this.Greeting(false);
+        this.Biography(false);
+        this.SchoolWork(false);
+        this.CodingExamples(false);
+        this.WorkHistory(false);
         
         switch (event.target.id) {
         case 'greeting':
-            this.greeting(true)
+            this.Greeting(true);
             break;
         case 'biography':
-            this.biography(true)
+            this.Biography(true);
             break;
         case 'schoolWork':
-            this.schoolWork(true)
+            this.SchoolWork(true);
             break;
         case 'codingExamples':
-            this.codingExamples(true)
+            this.CodingExamples(true);
             break;
         case 'workHistory':
-            this.workHistory(true)
+            this.WorkHistory(true);
             break;
         }
     }

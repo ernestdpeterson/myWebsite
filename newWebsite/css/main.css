@@ -22,8 +22,12 @@ body { position: relative; margin: 0; padding-bottom: 6rem; min-height: 100%; ba
 
 .dropdownStyle { border-style: double; border-width: 5px; border-radius: 10px; border-color: blue; -webkit-box-shadow: 10px 10px 5px #545454; box-shadow: 10px 10px 5px #545454; background-color: #adadad; }
 
-.workBorder { border: 2px solid; border-radius: 5px; border-color: #6c757d; }
+.codingDisplay { width: 49vw; padding: 0; margin: 0; }
+
+.adjustMargin { margin-left: 10px; margin-right: 30px; }
+
+.workBorder, .codingDisplay { border: 2px solid; border-radius: 5px; border-color: #6c757d; }
 
 .extraPadding { margin: 0 2px 0 2px; }
 
-.footerColor { background: #cbcbcb; }
+.footerColor { height: 50px; }
