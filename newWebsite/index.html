@@ -50,6 +50,8 @@
             </div>
     </section>
 
+    <hr>
+
     <br>
 
     <section id="Greeting" class="bottomPadding" data-bind="visible: Greeting">
@@ -57,10 +59,12 @@
                 Greatings!
             </h2>
             <p class="text-left">
-                &emsp;Thank you for visiting my website. <br><br>
+                Thank you for visiting my website. <br><br>
                 &emsp;It has been a very interesting journey for me to build it. The practical application of my web development knowledge, gained from the <a href="https://www.udacity.com">Udacity</a> course materials and other resources, has been immensely rewarding.
                 <br><br>
-                &emsp;I am enjoying the creative and technical processes of web development and am looking forward to starting my career as a Web Developer. I hope that you enjoy what I have built and I would enjoy hearing from you.
+                &emsp;I am enjoying the creative and technical processes of web development and am looking forward to starting my career as a Web Developer.
+                <br><br>
+                &emsp; I hope that you enjoy what I have built and I would enjoy hearing from you.
 
             </p>
     </section>
@@ -106,11 +110,13 @@
                 <a class="adjustMargin" data-bind="attr: {target: '_blank', href: clickPath}">
                     <img class="w-10" data-bind="attr: {src: imageSource, alt: imageaAlt}">
                 </a>
+                <section id="titleAndDescription">
                     <h4 class="adjustMargin" data-bind="text: divTitle">
                     </h4>
                     <ul class="adjustMargin" data-bind="foreach: $data.description">
                         <li data-bind="text: $data"></li>
                     </ul>
+                </section>
             </div>
         </div>
     </section>
@@ -143,7 +149,7 @@
         </p>
         </div>
         <div class="col-3">
-            <p>Site updated: 11/03/2018</p>
+            <p>Site updated: 11/24/2018</p>
         </div>
         </div>
     </footer>
