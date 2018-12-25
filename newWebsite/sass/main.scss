@@ -62,6 +62,16 @@ body {
     box-shadow: 10px 10px 5px darken($lg, 50%);
     background-color: darken($lg, 15%);
 }
+.codingDisplay{
+    @extend .workBorder;
+    width: 49vw;
+    padding: 0;
+    margin: 0;
+}
+.adjustMargin{
+    margin-left: 10px;
+    margin-right: 30px;
+}
 .workBorder{
     border: 2px solid;
     border-radius: 5px;
@@ -71,5 +81,6 @@ body {
     margin: 0 2px 0 2px;
 }
 .footerColor{
-    background:  darken($lg, 3%);
+    // background:  darken($lg, 3%);
+    height: 50px;
 }
