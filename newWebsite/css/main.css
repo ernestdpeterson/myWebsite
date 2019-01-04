@@ -28,6 +28,8 @@ body { position: relative; margin: 0; padding-bottom: 6rem; min-height: 100%; ba
 
 .workBorder, .codingDisplay { border: 2px solid; border-radius: 5px; border-color: #6c757d; }
 
+.documents { height: 200px; width: 200px; }
+
 .extraPadding { margin: 0 2px 0 2px; }
 
 .footerColor { height: 50px; }

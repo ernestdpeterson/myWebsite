@@ -40,6 +40,8 @@
         <button id="codingExamples" class="btn btn-secondary" data-bind="click: displayControl">Coding Examples</button>
 
         <button id="workHistory" class="btn btn-secondary" data-bind="click: displayControl">Work History</button>
+
+        <button id="documents" class="btn btn-secondary" data-bind="click: displayControl">Documents</button>
         
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Me</button>
             <div class="dropdown-menu dropdownStyle" aria-labelledby="dropdownMenuButton">
@@ -87,7 +89,7 @@
             <span data-bind="text: title"></span><br>
             <span data-bind="text: school"></span><br>
             <span data-bind="text: dates"></span><br>
-            <span><a data-bind="attr: {href: url}">Website</a></span><br><br>
+            <span><a data-bind="attr: {href: url, target: '_blank'}">Website</a></span><br><br>
             </div>
         </div>
     </section>
@@ -98,7 +100,7 @@
             <div data-bind="attr: {class: divClass}">
                 <h5 class="text-center" data-bind="text: divTitle"></h5>
                 <a data-bind="attr: {target: '_blank', href: clickPath}">
-                    <img class="d-block w-10 mx-auto" data-bind="attr: {src: imageSource, alt: imageaAlt}">
+                    <img class="d-block w-10 mx-auto" height="100px" data-bind="attr: {src: imageSource, alt: imageaAlt}">
                 </a>
                 <p class="text-center">Click image to lauch app. Click <a data-bind="attr: {target: '_blank', href: gitURL}">HERE</a> to see code on Github.</p>
             </div>
@@ -108,7 +110,7 @@
         <div class="row" data-bind="foreach: carouselArray" >
             <div class= 'row codingDisplay'>
                 <a class="adjustMargin" data-bind="attr: {target: '_blank', href: clickPath}">
-                    <img class="w-10" data-bind="attr: {src: imageSource, alt: imageaAlt}">
+                    <img class="w-10" height="100px" data-bind="attr: {src: imageSource, alt: imageaAlt}">
                 </a>
                 <section id="titleAndDescription">
                     <h4 class="adjustMargin" data-bind="text: divTitle">
@@ -133,6 +135,15 @@
         </div>
     </section>
 
+    <section id="Documents" data-bind="visible: Documents">
+        <h3>Click Image To Open In New Window, Hover To See Brief Description</h3>
+        <div class="row" data-bind="foreach: documents">
+            <a data-bind="attr: {href: document, target: '_blank', title: description}">
+            <img class="documents" data-bind="attr: {src: image}"></img>
+            </a>
+        </div>
+    </section>
+
     <footer id="theFooter" class="col-xl"">
         <hr>
         <div class="row footerColor">
@@ -149,7 +160,7 @@
         </p>
         </div>
         <div class="col-3">
-            <p>Site updated: 11/24/2018</p>
+            <p>Site updated: 1/4/2019</p>
         </div>
         </div>
     </footer>

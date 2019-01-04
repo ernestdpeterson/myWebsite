@@ -1,5 +1,5 @@
 /*eslint-env jquery*/
-/* exported bio education work carouselArray */
+/* exported bio education work carouselArray documents */
 
 var bio = {
     'name' : 'Ernest D. Peterson',
@@ -88,8 +88,14 @@ var education = {
         {
             'title' : 'Learn and Master JavaScript',
             'school' : 'Udemy',
-            'dates' : '10/2018-Now',
+            'dates' : '10/2018-12/2018',
             'url' : 'https://www.udemy.com'
+        },
+        {
+            'title': 'JavaScript AJAX XHR for beginners',
+            'school': 'Udemy',
+            'dates': '12/2018-12/2018',
+            'url': 'https://www.udemy.com/ajax-api-javascript/'
         }
     ]
 };
@@ -136,6 +142,24 @@ var work = [
         'location' : 'Ellisville, MS',
         'dates' : '02/1991-11/1993',
         'description' : 'Delivered parts from/to GM warehouses and plants.'
+    }
+];
+
+var documents = [
+    {
+        'document': './images/ErnestPetersonResume.pdf',
+        'image': './images/ErnestPetersonResume.png',
+        'description': 'My resume.'
+    }, 
+    {
+        'document': './images/FEND.pdf',
+        'image': './images/FEND.png',
+        'description': 'Front End Web Developer Nano Degree.'
+    }, 
+    {
+        'document': './images/ajaxXML.pdf',
+        'image': './images/ajaxXML.png',
+        'description': 'Short course on AJAX XML.'
     }
 ];
 

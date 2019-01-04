@@ -1,6 +1,5 @@
 /*eslint-env jquery*/
-
-var ko;
+/*globals ko*/
 
 var viewModel = {
     Greeting: ko.observable(true),
@@ -8,6 +7,7 @@ var viewModel = {
     SchoolWork: ko.observable(false),
     CodingExamples: ko.observable(false),
     WorkHistory: ko.observable(false),
+    Documents: ko.observable(false),
 
     displayControl: function(data, event) {
         this.Greeting(false);
@@ -15,6 +15,7 @@ var viewModel = {
         this.SchoolWork(false);
         this.CodingExamples(false);
         this.WorkHistory(false);
+        this.Documents(false);
         
         switch (event.target.id) {
         case 'greeting':
@@ -31,6 +32,9 @@ var viewModel = {
             break;
         case 'workHistory':
             this.WorkHistory(true);
+            break;
+        case 'documents':
+            this.Documents(true);
             break;
         }
     }
