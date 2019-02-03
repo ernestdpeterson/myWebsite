@@ -18,22 +18,22 @@ var viewModel = {
         this.Documents(false);
         
         switch (event.target.id) {
-        case 'greeting':
+        case "greeting":
             this.Greeting(true);
             break;
-        case 'biography':
+        case "biography":
             this.Biography(true);
             break;
-        case 'schoolWork':
+        case "schoolWork":
             this.SchoolWork(true);
             break;
-        case 'codingExamples':
+        case "codingExamples":
             this.CodingExamples(true);
             break;
-        case 'workHistory':
+        case "workHistory":
             this.WorkHistory(true);
             break;
-        case 'documents':
+        case "documents":
             this.Documents(true);
             break;
         }

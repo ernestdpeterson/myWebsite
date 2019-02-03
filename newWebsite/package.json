@@ -1,5 +1,5 @@
 {
-  "name": "website2",
+  "name": "new_website",
   "version": "1.0.0",
   "description": "My new website.",
   "main": "gulpfile.js",
@@ -17,12 +17,15 @@
   },
   "homepage": "https://github.com/ernestdpeterson/myWebsite#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-uglifycss": "^1.1.0"
   }
 }
