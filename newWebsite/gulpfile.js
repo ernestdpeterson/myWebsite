@@ -40,9 +40,9 @@ var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
 
 gulp.task('default', function(done) {
-    gulp.watch('sass/**/*.scss', ['styling']);
-    gulp.watch('js/**/*.js', ['lint']);
-    gulp.watch(['index.html', 'js/*.js', 'css/main.css']).on('change', browserSync.reload);
+    gulp.watch('sass/**/*.scss', gulp.series('styling'));
+    gulp.watch('js/**/*.js', gulp.series('lint'));
+    gulp.watch(['index.html', 'js/*.js', 'sass/main.scss']).on('change', browserSync.reload);
     browserSync.init({
         server: './'
     });

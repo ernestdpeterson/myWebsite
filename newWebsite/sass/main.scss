@@ -68,14 +68,25 @@ body {
     padding: 0;
     margin: 0;
 }
+.educationDisplay{
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #6c757d;
+    // height: 35vh;
+}
 .adjustMargin{
     margin-left: 10px;
     margin-right: 30px;
+}
+.enhanceTitle{
+    color: #607d8b;
+    text-shadow: 1px 1px 0 white;
 }
 .workBorder{
     border: 2px solid;
     border-radius: 5px;
     border-color: #6c757d;
+    height: 35vh;
 }
 .documents{
     height: 200px;
@@ -83,6 +94,11 @@ body {
 }
 .extraPadding{
     margin: 0 2px 0 2px;
+}
+.footerButtons{
+    border-radius: 5px;
+    background-color: gray;
+    text-shadow:  1px 1px 0 white;
 }
 .footerColor{
     // background:  darken($lg, 3%);

@@ -58,7 +58,7 @@
 
     <section id="Greeting" class="bottomPadding" data-bind="visible: Greeting">
             <h2 class="text-center">
-                Greatings!
+                Greetings!
             </h2>
             <p class="text-left">
                 Thank you for visiting my website. <br><br>
@@ -73,11 +73,11 @@
 
     <section id="Biography" class="bottomPadding" data-bind="visible: Biography">
         <p class="messageBody">
-            &emsp;I was born in Litchfield, KY and currently live in Pensacola, FL. My current career is truck driver but after nearly thirty years, and having been to almost every state in the USA, I am seeking a new challenge.<br>
+            &emsp;I was born in Litchfield, KY and currently live in Pensacola, FL. My current career is truck driver but after thirty+ years, and having been to almost every state in the USA, I am seeking a new challenge.<br>
             &emsp;I have always had a fascination with computers and electronics. In high school (South Jones High: Ellisville, MS)   I took my first computer courses (computer lab, and business computers). Although the TRS-80’s that the school had where far from state of the art or consistent in their operation I loved the time I spent on them. <br>
             &emsp;I bought my first desktop in 1996. I can’t say that I have many fond memories of that system because it was woefully under-powered, horribly unstable and the hard drive was barely big enough to contain the OS (Windows95). This combination did not make for a pleasant experience but it did give me valuable experience with troubleshooting. <br>
             &emsp;I built my first computer in 1996 or 1997.  I just couldn’t stand that original desktop system any longer and building one would give my control over the components. My time spent researching and building that system has served me well when upgrading/repairing computers and in the CompTIA+ course I took through University of Phoenix (2014).  <br>
-            &emsp;In 2014 I decided to change careers and started taking online classes to facilitate this change. My first foray into this world was with University of Phoenix (Computer Science) but I didn’t agree with their idea of course curriculum. I was looking for a more non-traditional, focused program. I found a good fit, for me, with O’Reilly School of Technology. I decided on database administration and completed the first level (Introduction to Database Administration) where I learned MySQL. When I started the second level; I found that my lack of familiarity with the Linux OS was an issue so I suspended the database course and started Linux Systems Administration to get up to speed. I had no prior experience with Linux but I quickly found that I enjoyed using it more than Windows. I have since installed CentOS on my Desktop and bought a laptop to install it on as well. Unfortunately, before I could complete my courses, O’Reilly closed.<br>
+            &emsp;In 2014 I decided to change careers and started taking online classes to facilitate this change. My first foray into this world was with University of Phoenix (Computer Science) but I didn’t agree with their idea of course curriculum. I was looking for a more non-traditional, focused program. I found a good fit, for me, with O’Reilly School of Technology. I decided on database administration and completed the first level (Introduction to Database Administration) where I learned MySQL. When I started the second level; I found that my lack of familiarity with the Linux OS was an issue so I suspended the database course and started Linux Systems Administration to get up to speed. I had no prior experience with Linux but I quickly found that I enjoyed using it more than Windows. I have since installed CentOS on my Desktops and bought a laptop to install it on as well. Unfortunately, before I could complete my courses, O’Reilly closed.<br>
             &emsp;The combination of experiences with the online education, the further research I had to do when O’Reilly’s closed and the advancement, and proliferation, of online education led me to Udacity. Thanks to my research and experiences I decided that Web Development was a better fit for me since it allowed for creative expression as well as programming.   
  
         </p>
@@ -85,8 +85,8 @@
 
     <section id="SchoolWork" class="bottomPadding" data-bind="visible: SchoolWork">
         <div class="row" data-bind="foreach: education.onlineCourses">
-            <div class="col-6 workBorder">
-            <span data-bind="text: title"></span><br>
+            <div class="col-6 educationDisplay">
+            <h5 data-bind="text: title"></h5><br>
             <span data-bind="text: school"></span><br>
             <span data-bind="text: dates"></span><br>
             <span><a data-bind="attr: {href: url, target: '_blank'}">Website</a></span><br><br>
@@ -102,7 +102,7 @@
                 <a data-bind="attr: {target: '_blank', href: clickPath}">
                     <img class="d-block w-10 mx-auto" height="100px" data-bind="attr: {src: imageSource, alt: imageaAlt}">
                 </a>
-                <p class="text-center">Click image to lauch app. Click <a data-bind="attr: {target: '_blank', href: gitURL}">HERE</a> to see code on Github.</p>
+                <p class="text-center">Click image to launch app. Click <a data-bind="attr: {target: '_blank', href: gitURL}">HERE</a> to see code on Github.</p>
             </div>
         </div>
     </section>
@@ -113,8 +113,9 @@
                     <img class="w-10" height="100px" data-bind="attr: {src: imageSource, alt: imageaAlt}">
                 </a>
                 <section id="titleAndDescription">
-                    <h4 class="adjustMargin" data-bind="text: divTitle">
+                    <h4 class="adjustMargin enhanceTitle" data-bind="text: divTitle">
                     </h4>
+                    <h5>This used:</h5>
                     <ul class="adjustMargin" data-bind="foreach: $data.description">
                         <li data-bind="text: $data"></li>
                     </ul>
@@ -144,15 +145,15 @@
         </div>
     </section>
 
-    <footer id="theFooter" class="col-xl"">
+    <footer id="theFooter" class="col-xl">
         <hr>
         <div class="row footerColor">
-        <div class="col-2"">
-            <a href="mailto:ernest@ernestpeterson.com">Email Me</a>
+        <div class="col-2">
+            <button class="footerButtons"><a href="mailto:ernest@ernestpeterson.com">Email Me</a></button>
             <br><br>
-            <a target="_blank" href="http://www.linkedin.com/in/ernest-peterson-2b9ab410a/">My LinkedIn</a>
+            <button class="footerButtons"><a target="_blank" href="http://www.linkedin.com/in/ernest-peterson-2b9ab410a/">My LinkedIn</a></button>
         </div>
-        <div class="col-6"">
+        <div class="col-6">
         <p class="col-xl text-center">
             Site built with <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="http://knockoutjs.com/">KnockoutJS</a>, HTML5, CSS3, Sass, JavaScript and Gulp.
             <br>
@@ -160,7 +161,7 @@
         </p>
         </div>
         <div class="col-3">
-            <p>Site updated: 1/4/2019</p>
+            <p>Site updated: 09/13/2019</p>
         </div>
         </div>
     </footer>

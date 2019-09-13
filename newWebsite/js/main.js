@@ -102,10 +102,17 @@ var education = {
 
 var work = [
     {
+        "employer" : "Hunter Oil",
+        "title" : "Truck Driver",
+        "location" : "Evergreen, AL & Pensacola, FL ",
+        "dates" : "04/2019-current",
+        "description" : "Delivery of oils and related products.<br>Complying with all local, state and federal regulations.<br>Managing paperwork for load, Department of Transportation and company regulatory compliance."
+    },
+    {
         "employer" : "Airgas",
         "title" : "Truck Driver",
         "location" : "Star, MS",
-        "dates" : "06/2008-current",
+        "dates" : "06/2008-04/2019",
         "description" : "Loading, delivering and unloading liquid CO2 or Dry Ice.<br>Complying with all local, state and federal regulations.<br>Managing paperwork for load, Department of Transportation and company regulatory compliance."
     },
     {
@@ -179,7 +186,7 @@ var carouselArray = [
         "divTitle": "Google Maps API",
         "clickPath": "googleMaps/ko.html",
         "imageSource": "images/googleKO.png",
-        "imageaAlt": "Screenshot of a google map",
+        "imageaAlt": "Screen shot of a Google map",
         "gitURL": "https://github.com/ernestdpeterson/googleMaps",
         "description": ["Google API's", "JavaScript", "KnockoutJS", "AJAX"]
     },
@@ -188,9 +195,18 @@ var carouselArray = [
         "divTitle": "My Website ",
         "clickPath": "index.html",
         "imageSource": "images/website.png",
-        "imageaAlt": "Screenshot of this website",
+        "imageaAlt": "Screen shot of this website",
         "gitURL": "https://github.com/ernestdpeterson/myWebsite/tree/master/newWebsite",
         "description": ["Host Gator Web Hosting", "FileZilla Upload Manager", "Bootstrap", "SASS", "KnockoutJS"]
+    },
+    {
+         "divClass": "carousel-item",
+         "divTitle": "Cookie Snake",
+         "clickPath": "cookieSnake/index.html",
+         "imageSource": "images/cookieSnake.png",
+         "imageaAlt": "Screen shot of the game screen",
+         "gitURL": "https://github.com/ernestdpeterson/cookieSnake",
+         "description": ["Object oriented programming", "Game logic", "Javascript", "html Canvas"]
     }//,
     // {
     //     "divClass": "carousel-item",

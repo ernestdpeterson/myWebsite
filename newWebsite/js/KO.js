@@ -2,6 +2,7 @@
 /*globals ko*/
 
 var viewModel = {
+    // sets the initial state of the landing page
     Greeting: ko.observable(true),
     Biography: ko.observable(false),
     SchoolWork: ko.observable(false),
@@ -9,6 +10,7 @@ var viewModel = {
     WorkHistory: ko.observable(false),
     Documents: ko.observable(false),
 
+    // changes the section displayed
     displayControl: function(data, event) {
         this.Greeting(false);
         this.Biography(false);
