@@ -5,6 +5,8 @@
 #skillsHeader{font-size:4vw;color:#818182;text-shadow:-1px 0 #353535,0 1px #353535}
 .bottomPadding{padding-bottom:20px}.skillsList{background-color:#dbdbdb;border:1px solid;border-radius:5px;border-color:#dbdbdb;-webkit-box-shadow:-1px 0 #878787,0 1px #878787;box-shadow:-1px 0 #878787,0 1px #878787}
 .dropdownStyle{border-style:double;border-width:5px;border-radius:10px;border-color:blue;-webkit-box-shadow:10px 10px 5px #545454;box-shadow:10px 10px 5px #545454;background-color:#adadad}
-.codingDisplay{width:49vw;padding:0;margin:0}.adjustMargin{margin-left:10px;margin-right:30px}
-.workBorder,.codingDisplay{border:2px solid;border-radius:5px;border-color:#6c757d}
-.documents{height:200px;width:200px}.extraPadding{margin:0 2px 0 2px}.footerColor{height:50px}
+.codingDisplay{width:49vw;padding:0;margin:0}.educationDisplay{border:2px solid;border-radius:5px;border-color:#6c757d}
+.adjustMargin{margin-left:10px;margin-right:30px}.enhanceTitle{color:#607d8b;text-shadow:1px 1px 0 white}
+.workBorder,.codingDisplay{border:2px solid;border-radius:5px;border-color:#6c757d;height:35vh}
+.documents{height:200px;width:200px}.extraPadding{margin:0 2px 0 2px}.footerButtons{border-radius:5px;background-color:gray;text-shadow:1px 1px 0 white}
+.footerColor{height:50px}
