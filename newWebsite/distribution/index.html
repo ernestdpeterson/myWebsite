@@ -110,11 +110,12 @@
         <div class="row" data-bind="foreach: carouselArray" >
             <div class= 'row codingDisplay'>
                 <a class="adjustMargin" data-bind="attr: {target: '_blank', href: clickPath}">
-                    <img class="w-10" height="100px" data-bind="attr: {src: imageSource, alt: imageaAlt}">
+                    <img class="w-10" title="Click here to lauch app" height="100px" data-bind="attr: {src: imageSource, alt: imageaAlt}">
                 </a>
                 <section id="titleAndDescription">
                     <h4 class="adjustMargin enhanceTitle" data-bind="text: divTitle">
                     </h4>
+                    <h6 title="Click here to go to GitHub"><a data-bind="attr: {target: '_blank', href: gitURL}">See this code on GitHub</a></h6>
                     <h5>This used:</h5>
                     <ul class="adjustMargin" data-bind="foreach: $data.description">
                         <li data-bind="text: $data"></li>

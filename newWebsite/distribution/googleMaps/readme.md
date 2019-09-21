@@ -4,7 +4,7 @@ Welcome to the project that has caused me more problems than all the others comb
 
 The purpose of this app is to display a full page map with location markers and list of locations (and make me pull all my hair out). 
 
-I took the "full page" pat rather literal because I didn't scroll down to see the pictures of the project in the rubric. :-)
+I took the "full page" path rather literal because I didn't scroll down to see the pictures of the project in the rubric. :-)
 
 ### Instructions
 

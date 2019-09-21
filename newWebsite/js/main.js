@@ -66,19 +66,6 @@ var education = {
             "dates" : "2/2018-2/2018",
             "url" : "https://teamtreehouse.com"
         },
-        // {
-        //     "title": "PHP for WordPress",
-        //     "school": "Treehouse",
-        //     "dates": "3/2018-current",
-        //     "url": "https://teamtreehouse.com"
-        // },
-        // {
-        //     "title" : "Front End Frameworks",
-        //     "school" : "Udacity",
-        //     "dates" : "7/2018-current",
-        //     "url" : "https://www.udacity.com/",
-        //     "screenShot" : "images/udacityFEND.pdf"
-        // },
         {
             "title" : "Sass Basic Course",
             "school" : "Treehouse",
@@ -200,20 +187,12 @@ var carouselArray = [
         "description": ["Host Gator Web Hosting", "FileZilla Upload Manager", "Bootstrap", "SASS", "KnockoutJS"]
     },
     {
-         "divClass": "carousel-item",
-         "divTitle": "Cookie Snake",
-         "clickPath": "cookieSnake/index.html",
-         "imageSource": "images/cookieSnake.png",
-         "imageaAlt": "Screen shot of the game screen",
-         "gitURL": "https://github.com/ernestdpeterson/cookieSnake",
-         "description": ["Object oriented programming", "Game logic", "Javascript", "html Canvas"]
-    }//,
-    // {
-    //     "divClass": "carousel-item",
-    //     "divTitle": "",
-    //     "clickPath": "",
-    //     "imageSource": "",
-    //     "imageaAlt": "",
-    //     "gitURL": ""
-    // }
+        "divClass": "carousel-item",
+        "divTitle": "Cookie Snake",
+        "clickPath": "cookieSnake/index.html",
+        "imageSource": "images/cookieSnake.png",
+        "imageaAlt": "Screen shot of the game screen",
+        "gitURL": "https://github.com/ernestdpeterson/cookieSnake",
+        "description": ["Object oriented programming", "Game logic", "Javascript", "html Canvas"]
+    }
 ];
