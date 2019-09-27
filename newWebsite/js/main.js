@@ -83,6 +83,12 @@ var education = {
             "school": "Udemy",
             "dates": "12/2018-12/2018",
             "url": "https://www.udemy.com/ajax-api-javascript/"
+        },
+        {
+            "title": "The Complete Web Developer: 2019 Zero to Mastery",
+            "school": "Udemy",
+            "dates": "9/2019-Current",
+            "url": "https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/"
         }
     ]
 };
