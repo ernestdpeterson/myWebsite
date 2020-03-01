@@ -54,6 +54,9 @@ body {
     border-color: lighten($lg, 3%);
     box-shadow: -1px 0 darken($lg, 30%), 0 1px darken($lg, 30%);
 }
+#dropdownMenuButton{
+    float: right;
+}
 .dropdownStyle{
     border-style: double;
     border-width: 5px;
@@ -86,7 +89,6 @@ body {
     border: 2px solid;
     border-radius: 5px;
     border-color: #6c757d;
-    height: 35vh;
 }
 .documents{
     height: 200px;

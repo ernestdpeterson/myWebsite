@@ -85,7 +85,7 @@ var education = {
             "url": "https://www.udemy.com/ajax-api-javascript/"
         },
         {
-            "title": "The Complete Web Developer: 2019 Zero to Mastery",
+            "title": "The Complete Web Developer: 2020 Zero to Mastery",
             "school": "Udemy",
             "dates": "9/2019-Current",
             "url": "https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/"

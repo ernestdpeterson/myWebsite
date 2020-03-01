@@ -20,6 +20,8 @@ body { position: relative; margin: 0; padding-bottom: 6rem; min-height: 100%; ba
 
 .skillsList { background-color: #dbdbdb; border: 1px solid; border-radius: 5px; border-color: #dbdbdb; -webkit-box-shadow: -1px 0 #878787, 0 1px #878787; box-shadow: -1px 0 #878787, 0 1px #878787; }
 
+#dropdownMenuButton { float: right; }
+
 .dropdownStyle { border-style: double; border-width: 5px; border-radius: 10px; border-color: blue; -webkit-box-shadow: 10px 10px 5px #545454; box-shadow: 10px 10px 5px #545454; background-color: #adadad; }
 
 .codingDisplay { width: 49vw; padding: 0; margin: 0; }
@@ -30,7 +32,7 @@ body { position: relative; margin: 0; padding-bottom: 6rem; min-height: 100%; ba
 
 .enhanceTitle { color: #607d8b; text-shadow: 1px 1px 0 white; }
 
-.workBorder, .codingDisplay { border: 2px solid; border-radius: 5px; border-color: #6c757d; height: 35vh; }
+.workBorder, .codingDisplay { border: 2px solid; border-radius: 5px; border-color: #6c757d; }
 
 .documents { height: 200px; width: 200px; }
 
